@@ -1,7 +1,7 @@
 <?php
 
 return [
-
+    LaravelLegends\PtBrValidator\ValidatorProvider::class,
     /*
     |--------------------------------------------------------------------------
     | Application Name
