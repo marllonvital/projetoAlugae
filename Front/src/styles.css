@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+h1, h2,h3{
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+  color: #393F60;
+}
+
+h4,h5,h6, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#575E8B;
+}
