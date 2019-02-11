@@ -6,21 +6,21 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateBankInformationsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
-        Schema::create('bank__informations', function (Blueprint $table) {
+        Schema::create('bank_informations', function (Blueprint $table) {
             $table->increments('id');
-            $table->increments('numero_do_cartao');
-            $table->increments('tipo_do_cartao');
-            $table->increments('validade');
-            $table->increments('bandeira');
+            $table->string('numero_do_cartao');
+            $table->string('tipo_do_cartao');
+            $table->string('validade');
+            $table->string('bandeira');
+            $table->string('usuario_nome');
             $table->timestamps();
         });
+
+        Schema::table('bank_informations', function (Blueprint $table) {
+            $table->foreign('usuario_nome')->references('nome')->on('users')->onDelete('cascade');
     }
 
     public function down()
