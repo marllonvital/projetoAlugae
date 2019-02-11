@@ -15,12 +15,13 @@ class CreateBankInformationsTable extends Migration
             $table->string('tipo_do_cartao');
             $table->string('validade');
             $table->string('bandeira');
-            $table->string('usuario_nome');
+            $table->integer('usuario_id')->unsigned();
             $table->timestamps();
         });
 
         Schema::table('bank_informations', function (Blueprint $table) {
-            $table->foreign('usuario_nome')->references('nome')->on('users')->onDelete('cascade');
+            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 
     public function down()

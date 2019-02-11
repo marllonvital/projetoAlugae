@@ -11,8 +11,8 @@ class CreateRentsTable extends Migration
     {
         Schema::create('rents', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('usuario_id')->unique();
-            $table->integer('produto_id')->unique();
+            $table->integer('usuario_id')->unsigned();
+            $table->integer('produto_id')->unsigned();
             $table->string('data_inicial');
             $table->string('data_final');
             $table->string('historico');
@@ -21,8 +21,11 @@ class CreateRentsTable extends Migration
         });
 
         Schema::table('rents', function (Blueprint $table) {
+            $table->foreign('produto_id')->references('id')->on('products')->onDelete('cascade');
+        });
+        Schema::table('rents', function (Blueprint $table) {
             $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('produto_id')->references('id')->on('product')->onDelete('cascade');
+        });
     }
 
     public function down()
