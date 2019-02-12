@@ -1,0 +1,165 @@
+/* CONFIGURAÇÕES NAV GERAL */
+
+.main_nav{
+  height: 9.65vh;
+  background: linear-gradient(180deg, #393F60 0%, #575E8B 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0;
+}
+
+
+.ally_nav{
+  background: #95B2D0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 5.42vh;
+}
+
+
+nav .nav-wrapper{
+  height: 9.65vh;
+  min-height: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONGIGURAÇOES DE INPUT */
+
+.main_nav input{
+  margin-top: 3.5vh;
+  height: 3.5vh;
+}
+
+.main_nav input[type=search]:not(.browser-default){
+  background-color: white;
+  margin-bottom: 0;
+}
+
+
+.ally_nav input{
+  margin-top: 1vh;
+  height: 3.5vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+.ally_nav input[type=search]:not(.browser-default){
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 0;
+}
+
+
+input::placeholder{
+  padding-left: 3vw;
+  color: rgba(28, 179, 200, 0.5);
+}
+
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONFIGURAÇÕES LOGO */
+
+.logo_size{
+  height: 8vh;
+}
+
+
+.alugae_icon{
+  position: absolute;
+  left: 8.96%;
+  right: 79.58%;
+  top: 9.73%;
+  bottom: 47.57%;
+  height: 8vh;
+}
+
+
+.hands_icon{
+  margin-top: 1vh;
+  height: 8vh
+}
+
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONFIGURAÇÕES DE ROW E COL */
+
+.row{
+  margin-bottom: 0;
+}
+
+
+.row .col{
+  padding: 0;
+}
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONFIGURAÇÕES DE BOTÕES, LABELS E LINKS */
+
+nav .sidenav-trigger i{
+  margin-left: 4vw;
+  padding-top: 1vh;
+  margin-top: 0vh;
+  font-size: 3.5vh;
+  height: 3.5vh
+}
+
+
+.main_nav a.btn{
+  font-family: Roboto, sans-serif;
+  margin-top: 3.5vh;
+  height: 3.5vh;
+  border-radius: 0px 5px 5px 0px;
+  background: #1CB3C8;
+  text-transform: none;
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+
+
+.ally_nav label, .ally_nav img{
+  height: 2.71vh;
+  line-height: 0.5em;
+  color: #1CB3C8 !important;
+  right: 1rem;
+  left: auto;
+}
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONFIGURAÇÕES DE LISTA */
+
+.flex_container{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+
+#categorias_dropdown li{
+  margin-top: 0vh;
+}
+
+
+.dropdown-content {
+  top: 67% !important;
+}
+
+
+.nav-wrapper li{
+  line-height: 3.5vh;
+  height: 3.5;
+  margin-top: 3.5vh;
+  background-color: #ffffff;
+}
+
+
+.nav-wrapper li a{
+  color: #1CB3C8;
+}
