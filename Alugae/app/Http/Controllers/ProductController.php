@@ -1,7 +1,12 @@
 <?php
 namespace App\Http\Controllers;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 use App\Product;
+
 class ProductController extends Controller
 {
     /**
@@ -19,7 +24,7 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
       $novo_produto= new Product;
       $novo_produto->insereProduto($request);
@@ -43,7 +48,7 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductRequest $request, $id)
     {
       $novo_produto= Product::findOrFail($id);
       $novo_produto->atualizaProduto($request);

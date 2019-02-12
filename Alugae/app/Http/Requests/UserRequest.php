@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validations\Validator;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
 
 class UserRequest extends FormRequest
@@ -20,7 +20,7 @@ class UserRequest extends FormRequest
             return[
                 'nome' => 'required|string',
                 'email' => 'required|email',
-                'cpf' => 'required|cpf|formato_cpf|digits:11|unique:users,cpf',
+                'cpf' => 'required|cpf|formato_cpf|digits:11',
                 'cep' => 'required|numeric',
                 'telefone' => 'string|digits:11|telefone',
                 'complemento' => 'required|string',
@@ -50,8 +50,10 @@ class UserRequest extends FormRequest
             'cpf.required' => "Campo Obrigatório",
             'cpf.cpf' => "Insira um CPF válido",
             'cpf.formato_cpf' => "Insira o CPF na forma 111.222.333-44",
+            'cpf.digits' => "O cpf deve ter exatamente 11 digitos",
             'cep.required' => "Campo Obrigatório!",
             'telefone.telefone' => "Digite primeiramente o DDD e em seguida o telefone na forma 99999-9999",
+            'telefone.digits' => "O telefone deve ter exatamente 11 digitos",
             'complemento.required' => "Campo Obrigatório",
         ];
     }
