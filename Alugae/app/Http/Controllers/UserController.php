@@ -1,11 +1,7 @@
 <?php
-
 namespace App\Http\Controllers;
-
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use App\User;
-
 class UserController extends Controller
 {
     /**
@@ -15,9 +11,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+      return User::all();
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -26,9 +21,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novo_usuario= new User;
+      $novo_usuario->insereUsuario($request);
     }
-
     /**
      * Display the specified resource.
      *
@@ -37,9 +32,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+      $novo_usuario = User::findOrFail($id);
+      return response()->json([$novo_usuario]);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -49,9 +44,9 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $novo_usuario= $novo_usuario::find( $request->$novo_usuario_id);
+      $novo_usuario->atualizaUsuario($request);
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -60,6 +55,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $novo_usuario=User::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }

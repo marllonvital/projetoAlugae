@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Bank_Information;
 class Bank_InformationController extends Controller
 {
     /**
@@ -11,9 +11,12 @@ class Bank_InformationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $table = "bank_informations";
+
     public function index()
     {
-        //
+      $banco = Bank_Information::all();
+      return response()->json(['banco' => $banco]);
     }
 
     /**
@@ -24,7 +27,10 @@ class Bank_InformationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novo_banco= new Bank_Information;
+      $novo_banco->insereBancaria($request);
+
+      return response()->json([$novo_banco]);
     }
 
     /**
@@ -35,7 +41,8 @@ class Bank_InformationController extends Controller
      */
     public function show($id)
     {
-        //
+      $novo_banco = Bank_Information::findOrFail($id);
+      return response()->json([$novo_banco]);
     }
 
     /**
@@ -47,7 +54,9 @@ class Bank_InformationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $novo_banco= Bank_Information::findOrFail($id);
+      $novo_banco->atualizaBancaria($request);
+      return response()->json([$novo_banco]);
     }
 
     /**
@@ -58,6 +67,7 @@ class Bank_InformationController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $novo_banco=Bank_Information::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }

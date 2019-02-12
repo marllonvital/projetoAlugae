@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Category;
 class CategoryController extends Controller
 {
     /**
@@ -13,7 +13,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+      return Category::all();
     }
 
     /**
@@ -24,7 +24,10 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $nova_categoria= new Category;
+      $nova_categoria->insereCategoria($request);
+
+      return response()->json([$nova_categoria]);
     }
 
     /**
@@ -35,7 +38,8 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+      $nova_categoria = Category::findOrFail($id);
+      return response()->json([$nova_categoria]);
     }
 
     /**
@@ -47,7 +51,9 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $nova_categoria= Category::findOrFail($id);
+      $nova_categoria->atualizaCategoria($request);
+      return response()->json([$nova_categoria]);
     }
 
     /**
@@ -58,6 +64,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $nova_categoria=Category::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }
