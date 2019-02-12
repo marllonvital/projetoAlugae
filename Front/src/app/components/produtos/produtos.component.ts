@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-produtos',
+  templateUrl: './produtos.component.html',
+  styleUrls: ['./produtos.component.css']
 })
-export class HomeComponent implements OnInit {
+export class ProdutosComponent implements OnInit {
   produto: any[]=[
-    {nome: "Nintento",
+    {nome: "Super Nintendo ",
      preco: 100,
      ul: "assets/img/produto_defaut/defaut.png"}
   ];
   constructor() { }
+
 
   ngOnInit() {
   }

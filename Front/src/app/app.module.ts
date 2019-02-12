@@ -6,6 +6,7 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProdutosComponent } from './components/produtos/produtos.component';
 
 
 
@@ -13,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    ProdutosComponent,
   ],
   imports: [
     BrowserModule,

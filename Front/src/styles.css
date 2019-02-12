@@ -9,3 +9,21 @@ h4,h5,h6, p {
   font-weight: 300;
   color:#575E8B;
 }
+
+body{
+  background-color: #E8EBFF;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1CB3C8;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+  }
+
+  .btn:hover, .btn-large:hover{
+    background-color: #1CB3C8
+  }
