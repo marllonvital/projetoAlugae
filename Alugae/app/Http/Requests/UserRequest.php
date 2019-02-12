@@ -16,24 +16,24 @@ class UserRequest extends FormRequest
 
     public function rules()
     {
-            if($this->isMethod('post')){
-                return[
-                    'nome' => 'required|string',
-                    'email' => 'required|email',
-                    'cpf' => 'required|cpf|formato_cpf|digits:11|unique:users,cpf',
-                    'cep' => 'required|numeric',
-                    'telefone' => 'string|digits:11|telefone',
-                    'complemento' => 'required|string',
-                ];
+        if($this->isMethod('post')){
+            return[
+                'nome' => 'required|string',
+                'email' => 'required|email',
+                'cpf' => 'required|cpf|formato_cpf|digits:11|unique:users,cpf',
+                'cep' => 'required|numeric',
+                'telefone' => 'string|digits:11|telefone',
+                'complemento' => 'required|string',
+            ];
             }
-            if($this->isMethod('put')){
-                return [
-                    'nome' => 'string',
-                    'email' => 'email',
-                    'cpf' => 'unique:users,cpf,'.$this->users->id,
-                    'cep' => 'numeric',
-                    'telefone' => 'string|digits:11|telefone',
-                    'complemento' => 'string',
+        if($this->isMethod('put')){
+            return [
+                'nome' => 'string',
+                'email' => 'email',
+                'cpf' => 'unique:users,cpf,'.$this->users->id,
+                'cep' => 'numeric',
+                'telefone' => 'string|digits:11|telefone',
+                'complemento' => 'string',
                 ];
             }
     }

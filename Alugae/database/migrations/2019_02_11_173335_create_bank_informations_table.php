@@ -26,6 +26,6 @@ class CreateBankInformationsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('bank__informations');
+        Schema::dropIfExists('bank_informations');
     }
 }
