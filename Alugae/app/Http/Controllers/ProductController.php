@@ -13,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+      return Product::all();
     }
 
     /**
@@ -24,7 +24,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novo_produto= new Product;
+      $novo_produto->insereProduto($request);
+
+      return response()->json([$novo_produto]);
     }
 
     /**
@@ -35,7 +38,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+      $novo_produto = Product::findOrFail($id);
+      return response()->json([$novo_produto]);
     }
 
     /**
@@ -47,7 +51,9 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $novo_produto= Product::findOrFail($id);
+      $novo_produto->atualizaProduto($request);
+      return response()->json([$novo_produto]);
     }
 
     /**
@@ -58,6 +64,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $novo_produto=Product::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }

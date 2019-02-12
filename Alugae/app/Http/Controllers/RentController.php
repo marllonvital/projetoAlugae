@@ -13,7 +13,7 @@ class RentController extends Controller
      */
     public function index()
     {
-        //
+      return Rent::all();
     }
 
     /**
@@ -24,7 +24,8 @@ class RentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novo_aluguel= new Rent;
+      $novo_aluguel->insereAluguel($request);
     }
 
     /**
@@ -35,7 +36,8 @@ class RentController extends Controller
      */
     public function show($id)
     {
-        //
+      $novo_aluguel = Rent::findOrFail($id);
+      return response()->json([$novo_aluguel]);
     }
 
     /**
@@ -47,7 +49,9 @@ class RentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $novo_aluguel= Rent::findOrFail($id);
+      $novo_aluguel->atualizaAluguel($request);
+      return response()->json([$novo_aluguel]);
     }
 
     /**
@@ -58,6 +62,7 @@ class RentController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $novo_aluguel=Rent::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }

@@ -11,10 +11,12 @@ class Bank_InformationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $table = "bank_informations";
+
     public function index()
     {
-      Bank_Information::destroy($id);
-      return response()->json(['Deletado!']);
+      $banco = Bank_Information::all();
+      return response()->json(['banco' => $banco]);
     }
 
     /**
@@ -39,7 +41,7 @@ class Bank_InformationController extends Controller
      */
     public function show($id)
     {
-      $novo_banco = Bank_Information::findOrFail($sid);
+      $novo_banco = Bank_Information::findOrFail($id);
       return response()->json([$novo_banco]);
     }
 
@@ -52,8 +54,9 @@ class Bank_InformationController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $novo_banco= $novo_banco::find( $request->$novo_banco_id)
+      $novo_banco= Bank_Information::findOrFail($id);
       $novo_banco->atualizaBancaria($request);
+      return response()->json([$novo_banco]);
     }
 
     /**

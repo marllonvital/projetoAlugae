@@ -12,9 +12,8 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('tipo');
             $table->string('nome');
-            $table->string('peso');
+            $table->string('marca');
             $table->integer('preco');
-            $table->string('tamanho');
             $table->string('descricao');
             $table->string('disponibilidade');
             $table->timestamps();

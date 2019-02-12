@@ -13,7 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+      return User::all();
     }
 
     /**
@@ -24,7 +24,8 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $novo_usuario= new User;
+      $novo_usuario->insereUsuario($request);
     }
 
     /**
@@ -35,7 +36,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+      $novo_usuario = User::findOrFail($id);
+      return response()->json([$novo_usuario]);
     }
 
     /**
@@ -47,7 +49,8 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $novo_usuario= $novo_usuario::find( $request->$novo_usuario_id);
+      $novo_usuario->atualizaUsuario($request);
     }
 
     /**
@@ -58,6 +61,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+      $novo_usuario=User::destroy($id);
+      return response()->json(['Deletado!']);
     }
 }
