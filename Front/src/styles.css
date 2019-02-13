@@ -1,3 +1,4 @@
+/* Elementos */
 h1, h2,h3{
   font-family: 'Zilla Slab', serif;
   font-weight: bold;
@@ -72,6 +73,12 @@ body{
   background-color: #E8EBFF;
 }
 
+/* Classes */
+
+.meio{
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .btn, .btn-large {
     text-decoration: none;
     color: #fff;
