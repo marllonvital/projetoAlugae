@@ -161,11 +161,7 @@ nav .sidenav-trigger i{
 
 /* CONFIGURAÇÕES DE LISTA/DROPDOWN */
 
-.flex_container{
-  display: flex;
-  justify-content: space-around;
-  margin: 0 30vw 0 30vw;
-}
+
 
 
 #categorias_dropdown li{
