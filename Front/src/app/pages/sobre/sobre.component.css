@@ -1,14 +1,11 @@
 /* Elementos */
-h5{
-  text-align: center;
-  margin-left: 10%;
-}
+
 
 /*Classes  */
 .logo{
-  width: 35%;
+  width: 30%;
   margin-left: 10%;
-  margin-top: 47%;
+  margin-top: 35%;
   border-radius: 15px;
   box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -17,6 +14,14 @@ h5{
 }
 
 .icone{
-  width: 70%;
+  width: 60%;
   margin-left: 35%;
+  padding-top: 10%;
+}
+
+/* id */
+
+#texto_box{
+  text-align: center;
+  margin-left: 30%;
 }
