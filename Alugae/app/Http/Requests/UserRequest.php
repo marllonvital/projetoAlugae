@@ -18,22 +18,24 @@ class UserRequest extends FormRequest
     {
         if($this->isMethod('post')){
             return[
+              /*
                 'nome' => 'required|string',
                 'email' => 'required|email',
                 'cpf' => 'required|cpf|formato_cpf|digits:11',
                 'cep' => 'required|numeric',
                 'telefone' => 'string|digits:11|telefone',
-                'complemento' => 'required|string',
+                'complemento' => 'required|string',*/
             ];
             }
         if($this->isMethod('put')){
             return [
+              /*
                 'nome' => 'string',
                 'email' => 'email',
                 'cpf' => 'unique:users,cpf,'.$this->users->id,
                 'cep' => 'numeric',
                 'telefone' => 'string|digits:11|telefone',
-                'complemento' => 'string',
+                'complemento' => 'string',*/
                 ];
             }
     }
@@ -44,6 +46,7 @@ class UserRequest extends FormRequest
 
     public function messages() {
         return [
+          /*
             'nome.required' => "Campo Obrigatório!",
             'email.required' => "Campo Obrigatório!",
             'email.email' => "O campo deve ser preenchido no formato nomeDoUsuario@exemplo.com",
@@ -54,7 +57,7 @@ class UserRequest extends FormRequest
             'cep.required' => "Campo Obrigatório!",
             'telefone.telefone' => "Digite primeiramente o DDD e em seguida o telefone na forma 99999-9999",
             'telefone.digits' => "O telefone deve ter exatamente 11 digitos",
-            'complemento.required' => "Campo Obrigatório",
+            'complemento.required' => "Campo Obrigatório",*/
         ];
     }
 }
