@@ -12,9 +12,11 @@
 
 
 .ally_nav{
+  width: 100%;
   background: #95B2D0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   height: 9.65vh;
+  margin-bottom: 1vh;
 }
 
 nav{
@@ -35,10 +37,10 @@ nav{
 
 .alugae_icon{
   position: absolute;
-  left: 8.96%;
-  right: 79.58%;
-  top: 9.73%;
-  bottom: 47.57%;
+  left: auto;
+  right: 78.58%;
+  top: 1.73%;
+  bottom: auto;
 }
 
 
