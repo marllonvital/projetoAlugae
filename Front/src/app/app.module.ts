@@ -8,6 +8,11 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProdutosComponent } from './components/produtos/produtos.component';
+import { SobreComponent } from './pages/sobre/sobre.component';
+
+
 
 @NgModule({
   declarations: [
@@ -15,6 +20,9 @@ import { LoginComponent } from './pages/login/login.component';
     NavbarComponent,
     FooterComponent,
     LoginComponent,
+    HomeComponent,
+    ProdutosComponent,
+    SobreComponent,
   ],
   imports: [
     BrowserModule,
