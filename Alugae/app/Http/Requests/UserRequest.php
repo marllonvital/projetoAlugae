@@ -20,9 +20,9 @@ class UserRequest extends FormRequest
             return[
                 'nome' => 'required|string',
                 'email' => 'required|email',
-                'cpf' => 'required|cpf|formato_cpf|digits:11',
+                'cpf' => 'required|cpf|formato_cpf',
                 'cep' => 'required|numeric',
-                'telefone' => 'string|digits:11|telefone',
+                'telefone' => 'string|telefone',
                 'complemento' => 'required|string',
             ];
             }
@@ -32,7 +32,7 @@ class UserRequest extends FormRequest
                 'email' => 'email',
                 'cpf' => 'unique:users,cpf,'.$this->users->id,
                 'cep' => 'numeric',
-                'telefone' => 'string|digits:11|telefone',
+                'telefone' => 'string|telefone',
                 'complemento' => 'string',
                 ];
             }
@@ -50,10 +50,8 @@ class UserRequest extends FormRequest
             'cpf.required' => "Campo Obrigatório",
             'cpf.cpf' => "Insira um CPF válido",
             'cpf.formato_cpf' => "Insira o CPF na forma 111.222.333-44",
-            'cpf.digits' => "O cpf deve ter exatamente 11 digitos",
             'cep.required' => "Campo Obrigatório!",
-            'telefone.telefone' => "Digite primeiramente o DDD e em seguida o telefone na forma 99999-9999",
-            'telefone.digits' => "O telefone deve ter exatamente 11 digitos",
+            'telefone.telefone' => "Digite o telefone na forma 9999-9999",
             'complemento.required' => "Campo Obrigatório",
         ];
     }
