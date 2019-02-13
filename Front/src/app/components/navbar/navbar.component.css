@@ -1,26 +1,51 @@
+
 /* CONFIGURAÇÕES NAV GERAL */
 
-.main_nav{
-  height: 9.65vh;
+.nav-wrapper{
+  height: 11vh;
   background: linear-gradient(180deg, #393F60 0%, #575E8B 100%);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 0;
+  height: 11vh;
+  min-height: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 
 .ally_nav{
   background: #95B2D0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  height: 5.42vh;
-}
-
-
-nav .nav-wrapper{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
   height: 9.65vh;
-  min-height: 0;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+nav{
+  background-color: transparent;
+}
+
+
+
+
+/* __________________________________________________________________________________________________________________________ */
+
+/* CONFIGURAÇÕES LOGO */
+
+.logo_size{
+  height: 9.5vh;
+}
+
+
+.alugae_icon{
+  position: absolute;
+  left: 8.96%;
+  right: 79.58%;
+  top: 9.73%;
+  bottom: 47.57%;
+}
+
+
+.hands_icon{
+  margin-top: 1vh;
+  height: 8vh
+}
 
 
 /* __________________________________________________________________________________________________________________________ */
@@ -28,8 +53,10 @@ nav .nav-wrapper{
 /* CONGIGURAÇOES DE INPUT */
 
 .main_nav input{
-  margin-top: 3.5vh;
-  height: 3.5vh;
+  margin-top: 2vh;
+  padding-left: 2vh;
+  width: 100%;
+  height: 7vh;
 }
 
 .main_nav input[type=search]:not(.browser-default){
@@ -37,9 +64,13 @@ nav .nav-wrapper{
   margin-bottom: 0;
 }
 
+input[type=search]:not(.browser-default):focus{
+  box-shadow: none;
+  border-bottom: none;
+}
 
 .ally_nav input{
-  margin-top: 1vh;
+  margin-top: 3.5vh;
   height: 3.5vh;
   display: flex;
   justify-content: center;
@@ -54,37 +85,13 @@ nav .nav-wrapper{
 
 
 input::placeholder{
-  padding-left: 3vw;
+  padding-left: 1vw;
   color: rgba(28, 179, 200, 0.5);
 }
 
 
 /* __________________________________________________________________________________________________________________________ */
 
-/* CONFIGURAÇÕES LOGO */
-
-.logo_size{
-  height: 8vh;
-}
-
-
-.alugae_icon{
-  position: absolute;
-  left: 8.96%;
-  right: 79.58%;
-  top: 9.73%;
-  bottom: 47.57%;
-  height: 8vh;
-}
-
-
-.hands_icon{
-  margin-top: 1vh;
-  height: 8vh
-}
-
-
-/* __________________________________________________________________________________________________________________________ */
 
 /* CONFIGURAÇÕES DE ROW E COL */
 
@@ -95,6 +102,10 @@ input::placeholder{
 
 .row .col{
   padding: 0;
+}
+
+.row .col.offset-l3{
+  margin-left: 23%;
 }
 
 /* __________________________________________________________________________________________________________________________ */
@@ -112,38 +123,56 @@ nav .sidenav-trigger i{
 
 .main_nav a.btn{
   font-family: Roboto, sans-serif;
-  margin-top: 3.5vh;
-  height: 3.5vh;
+  margin-top: 2vh;
+  height: 7vh;
+  width: 8.3vw;
   border-radius: 0px 5px 5px 0px;
   background: #1CB3C8;
   text-transform: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   box-shadow: none;
 }
 
 
 .ally_nav label, .ally_nav img{
   height: 2.71vh;
-  line-height: 0.5em;
+  /* line-height: 9.65vh; */
   color: #1CB3C8 !important;
-  right: 1rem;
+  right: 0rem;
   left: auto;
 }
 
+#lupa{
+  position: relative;
+  left: -4vw;
+  bottom: -4vh;
+}
+
+
 /* __________________________________________________________________________________________________________________________ */
 
-/* CONFIGURAÇÕES DE LISTA */
+/* CONFIGURAÇÕES DE LISTA/DROPDOWN */
 
 .flex_container{
   display: flex;
   justify-content: space-around;
+  margin: 0 30vw 0 30vw;
 }
-
 
 
 #categorias_dropdown li{
   margin-top: 0vh;
+}
+
+
+.main_nav i.m_i_menor{
+  height: 100%;
+  letter-spacing: normal;
+  line-height: 7vh;
+  float: right;
 }
 
 
@@ -153,13 +182,49 @@ nav .sidenav-trigger i{
 
 
 .nav-wrapper li{
-  line-height: 3.5vh;
-  height: 3.5;
-  margin-top: 3.5vh;
+  line-height: 7vh;
+  height: 7vh;
+  margin-top: 2vh;
+  width: 10vw;
   background-color: #ffffff;
+  border-collapse: collapse;
+  border-right-style: solid;
+  border-right-width: 0.0075vw;
+  border-color: #1CB3C8;
 }
 
 
-.nav-wrapper li a{
+.nav-wrapper li a.dropdown-button{
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  padding: 0 0 0 1vh;
   color: #1CB3C8;
+  word-break:normal;
+  width: 100%;
+}
+
+.ally_nav li, .ally_nav a{
+  margin-top: 0.5vh;
+  line-height: 8.65vh;
+  height: 8.65vh;
+  font-size: 1.05em;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+}
+
+.ally_nav li.divisor{
+  font-size: 9vh;
+  font-weight: 100;
+}
+
+
+
+/* RESOLVENDO O PROBLEMA DO IPAD PRO FAZENDO QUE SEMPRE QUE A A ORIENTAÇÃO FOR DE RETRATO ATIVE A VERSÃO MOBILE */
+@media (orientation: portrait) {
+  .hide-on-med-and-down{
+    display: none !important;
+  }
+  .hide-on-large-only{
+    display: block !important;
+  }
 }
