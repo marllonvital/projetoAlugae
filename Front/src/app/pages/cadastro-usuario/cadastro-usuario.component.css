@@ -3,16 +3,14 @@
 /* Classes */
 .viewport-1{
   background-size: cover;
-  background-image: url(/assets/img/cover/home.jpg);
+  background-image: url(/assets/img/cover/cadastro.jpg);
   height: 100vh;
 }
 
 .card{
   background-color: #393F60;
-  border-radius: 15px;
   margin-left: 60%;
-  margin-right: 5%;
-  margin-top: 5%;
+  height:100vh;
   position: absolute;
 }
 
@@ -22,12 +20,11 @@
     margin-left: 10%;
   }
 
-.botao_cadastrar{
-  background-color: #95B2D0;
-}
 /* Ids */
 
-#chamada_login{
+#texto_cadastro{
  color:#DFE2E2;
  margin-left: 5%;
+ font-family: 'Zilla Slab', serif;
+ font-weight: bold;
 }
