@@ -11,7 +11,6 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
-import { LoginComponent } from './pages/login/login.component';
 
 
 
@@ -24,7 +23,6 @@ import { LoginComponent } from './pages/login/login.component';
     HomeComponent,
     ProdutosComponent,
     SobreComponent,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
