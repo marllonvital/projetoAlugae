@@ -16,6 +16,7 @@ nav.nav-extended .nav-wrapper{
 
 
 .ally_nav{
+  /* position: absolute; */
   width: 100%;
   background: #95B2D0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -102,11 +103,6 @@ input::placeholder{
 
 .row{
   margin-bottom: 0;
-}
-
-
-.row .col{
-  padding: 0;
 }
 
 .row .col.offset-l3{
@@ -216,16 +212,4 @@ nav .sidenav-trigger i{
 .ally_nav li.divisor{
   font-size: 9vh;
   font-weight: 100;
-}
-
-
-
-/* RESOLVENDO O PROBLEMA DO IPAD PRO FAZENDO QUE SEMPRE QUE A A ORIENTAÇÃO FOR DE RETRATO ATIVE A VERSÃO MOBILE */
-@media (orientation: portrait) {
-  .hide-on-med-and-down{
-    display: none !important;
-  }
-  .hide-on-large-only{
-    display: block !important;
-  }
 }

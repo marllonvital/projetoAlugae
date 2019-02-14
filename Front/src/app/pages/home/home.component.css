@@ -11,10 +11,6 @@ h5{
   margin-bottom: 5%;
 } */
 
-.container img{
-  padding: 0;
-}
-
 
 .botao{
   margin-left: 55%;
@@ -52,11 +48,6 @@ h5{
   color: #F4F4F4;
 }
 
-
-@media (orientation: portrait){
-  .container{
-    margin: 0 !important;
-    max-width: 100vw;
-    width: 100vw;
-  }
+.card{
+  margin: 0 1.5vw 0 1.5vw
 }

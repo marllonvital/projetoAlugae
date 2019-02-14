@@ -80,28 +80,66 @@ body{
   margin-right: 10%;
 }
 .btn, .btn-large {
-    text-decoration: none;
-    color: #fff;
-    background-color: #1CB3C8;
-    text-align: center;
-    letter-spacing: .5px;
-    transition: .2s ease-out;
-    cursor: pointer;
-  }
+  text-decoration: none;
+  color: #fff;
+  background-color: #1CB3C8;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
 
-  .btn:hover, .btn-large:hover{
-    background-color: #1CB3C8
-  }
+.btn:hover, .btn-large:hover{
+  background-color: #1CB3C8
+}
 
-  .flex_container{
-    display: flex;
-    justify-content: space-around;
-    margin: 0 30vw 0 30vw;
-  }
+.flex_container{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 30vw 0 30vw;
+}
 
+.container{
+  margin: 0;
+  max-width: 100vw;
+  width: 100vw;
+}
+
+div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p{
+  padding: 0 3vw 0 3vw;
+}
+
+.container img{
+  padding: 0;
+}
+
+
+.row .col{
+  padding: 0;
+}
+
+
+
+/* Media Querys */
+@media (orientation: landscape){
   .container{
     margin: 0vw 10vw 5vh 10vw;
     max-width: 100vw;
     width: 80%;
     padding: 0;
   }
+
+  div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p{
+    padding: 0;
+  }
+}
+
+/* RESOLVENDO O PROBLEMA DO IPAD PRO FAZENDO QUE SEMPRE QUE A A ORIENTAÇÃO FOR DE RETRATO ATIVE A VERSÃO MOBILE */
+@media (orientation: portrait) {
+  .hide-on-med-and-down{
+    display: none !important;
+  }
+  .hide-on-large-only{
+    display: block !important;
+  }
+}
