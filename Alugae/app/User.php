@@ -20,29 +20,29 @@ class User extends Model
 
   public function insereUsuario($request){
 
-    $this->nome=$request->nome;
+    $this->name=$request->name;
     $this->cep=$request->cep;
     $this->cpf=$request->cpf;
-    $this->senha=$request->senha;
+    $this->password=$request->password;
     $this->email=$request->email;
-    $this->cidade=$request->cidade;
-    $this->telefone=$request->telefone;
-    $this->numero=$request->numero;
-    $this->complemento=$request->complemento;
+    $this->city=$request->city;
+    $this->telephone=$request->telephone;
+    $this->number=$request->number;
+    $this->complement=$request->complement;
 
     $this->save();
   }
   public function atualizaUsuario($request){
 
-    $this->nome=$request->nome;
+    $this->name=$request->name;
     $this->cep=$request->cep;
     $this->cpf=$request->cpf;
-    $this->senha=$request->senha;
+    $this->password=$request->password;
     $this->email=$request->email;
-    $this->cidade=$request->cidade;
-    $this->telefone=$request->telefone;
-    $this->numero=$request->numero;
-    $this->complemento=$request->complemento;
+    $this->city=$request->city;
+    $this->telephone=$request->telephone;
+    $this->number=$request->number;
+    $this->complement=$request->complement;
 
     $this->save();
   }

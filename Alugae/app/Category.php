@@ -9,14 +9,14 @@ class Category extends Model
 
   public function insereCategoria($request){
   	
-    $this->nome=$request->nome;
+    $this->name=$request->name;
 
 
     $this->save();
   }
     public function atualizaCategoria($request){
 
-      $this->nome=$request->nome;
+      $this->name=$request->name;
 
       $this->save();
 	}

@@ -11,16 +11,16 @@ class CreateBankInformationsTable extends Migration
     {
         Schema::create('bank_informations', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numero_do_cartao');
-            $table->string('validade');
-            $table->string('tipo_do_cartao');
-            $table->string('bandeira');
-            $table->integer('usuario_id')->unsigned()->nullable();
+            $table->string('number_card');
+            $table->string('validity');
+            $table->string('type_card');
+            $table->string('flag');
+            $table->integer('user_id')->unsigned()->nullable();
             $table->timestamps();
         });
 
         Schema::table('bank_informations', function (Blueprint $table) {
-            $table->foreign('usuario_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 

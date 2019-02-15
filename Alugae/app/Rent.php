@@ -8,23 +8,23 @@ class Rent extends Model
 {
   public function insereAluguel($request){
     
-    $this->historico=$request->historico;
-    $this->quantidade=$request->quantidade;
-    $this->data_final=$request->data_final;
-    $this->data_inicial=$request->data_inicial;
-    $this->produto_id=$request->produto_id;
-    $this->usuario_id=$request->usuario_id;
+    $this->historic=$request->historic;
+    $this->quantity=$request->quantity;
+    $this->date_final=$request->date_final;
+    $this->date_initial=$request->date_initial;
+    $this->product_id=$request->product_id;
+    $this->user_id=$request->user_id;
 
     $this->save();
   }
   public function atualizaAluguel($request){
 
-    $this->historico=$request->historico;
-    $this->quantidade=$request->quantidade;
-    $this->data_final=$request->data_final;
-    $this->data_inicial=$request->data_inicial;
-    $this->produto_id=$request->produto_id;
-    $this->usuario_id=$request->usuario_id;
+    $this->historic=$request->historic;
+    $this->quantity=$request->quantity;
+    $this->date_final=$request->date_final;
+    $this->date_initial=$request->date_initial;
+    $this->product_id=$request->product_id;
+    $this->user_id=$request->user_id;
 
     $this->save();
   }
