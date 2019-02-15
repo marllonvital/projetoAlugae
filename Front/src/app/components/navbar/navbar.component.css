@@ -229,3 +229,11 @@ nav .sidenav-trigger i{
     display: block !important;
   }
 }
+
+/* Classe */
+
+.login_provisorio{
+  margin-left:10%;
+  margin-top: 10%;
+  font-size: 1.9rem;;
+}
