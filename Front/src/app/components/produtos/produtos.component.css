@@ -1,0 +1,12 @@
+
+.carousel .carousel-item{
+  position: absolute;
+  top: -66px;
+  opacity: 1 !important;
+}
+
+
+
+.carousel{
+  /* height: 90vh; */
+}

@@ -1,0 +1,39 @@
+/* Elementos */
+
+
+/*Classes  */
+.logo{
+  width: 10vw;
+  border-radius: 15px;
+  box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.posicao{
+  position: relative;
+  top: -10vh;
+  left: 5vw;
+}
+
+.icone{
+  width: 60%;
+  margin-left: 35%;
+  padding-top: 10%;
+}
+
+.container .row{
+  margin: 0;
+}
+/* id */
+
+#texto_box{
+  text-align: center;
+  margin-left: 30%;
+}
+
+
+@media (orientation: landscape) {
+  .posicao{
+    position: absolute;
+    top: 70vh;
+    left: 15vw;
+  }
+}
