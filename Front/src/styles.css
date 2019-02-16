@@ -1,6 +1,7 @@
 body{
   background-color: #E8EBFF;
 }
+
 /* Elementos */
 h1, h2,h3{
   font-family: 'Zilla Slab', serif;
@@ -33,6 +34,9 @@ input[type]:not(.browser-default):focus{
    color: #fff !important;
  }
 
+
+/* TAMANHO DAS TAGS HEADER QUE PEGUEI NO MATERIALIZE.CSS E DEIXEI AQUI PARA
+PODER USAR EM BANNERS E ETC SEM ESTRAGAR O USO DE TAGS SEMÂNTICAS */
 .font_size_h1 {
   font-size: 4.2rem;
   line-height: normal;
@@ -121,7 +125,7 @@ input[type]:not(.browser-default):focus{
 .container{
   margin: 0;
   max-width: 100vw;
-  width: 100vw;
+  width: 100%;
 }
 
 .row .col{

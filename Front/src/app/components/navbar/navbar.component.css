@@ -1,11 +1,6 @@
 
 /* CONFIGURAÇÕES NAV GERAL */
 
-.main_nav{
-
-}
-
-
 nav.nav-extended .nav-wrapper{
   height: 11vh;
   background: linear-gradient(180deg, #393F60 0%, #575E8B 100%);
@@ -29,6 +24,7 @@ nav.nav-extended .nav-wrapper{
 
 nav{
   background-color: transparent;
+  width: 100%;
 }
 
 
