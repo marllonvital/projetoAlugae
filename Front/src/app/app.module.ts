@@ -15,6 +15,7 @@ import { SobreComponent } from './pages/sobre/sobre.component';
 import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usuario.component';
 import { LoginService } from './service/login.service';
 import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
 
 
 
@@ -30,6 +31,7 @@ import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-prod
     SobreComponent,
     CadastroUsuarioComponent,
     CadastroProdutoComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,
