@@ -18,21 +18,21 @@ class UserRequest extends FormRequest
     {
         if($this->isMethod('post')){
             return[
-                'nome' => 'required|string',
+                'name' => 'required|string',
                 'email' => 'required|email',
-                'cpf' => 'required|cpf|formato_cpf|digits:11',
+                'cpf' => 'required|cpf|formato_cpf',
                 'cep' => 'required|numeric',
-                'telefone' => 'string|digits:11|telefone',
+                'telefone' => 'string|telefone',
                 'complemento' => 'required|string',
             ];
             }
         if($this->isMethod('put')){
             return [
-                'nome' => 'string',
+                'name' => 'string',
                 'email' => 'email',
-                'cpf' => 'unique:users,cpf,'.$this->users->id,
+                //'cpf' => 'unique:users,cpf,'.$this->users->id,
                 'cep' => 'numeric',
-                'telefone' => 'string|digits:11|telefone',
+                'telefone' => 'string|telefone',
                 'complemento' => 'string',
                 ];
             }
@@ -44,16 +44,14 @@ class UserRequest extends FormRequest
 
     public function messages() {
         return [
-            'nome.required' => "Campo Obrigatório!",
+            'name.required' => "Campo Obrigatório!",
             'email.required' => "Campo Obrigatório!",
-            'email.email' => "O campo deve ser preenchido no formato nomeDoUsuario@exemplo.com",
+            'email.email' => "O campo deve ser preenchido no formato nameDoUsuario@exemplo.com",
             'cpf.required' => "Campo Obrigatório",
             'cpf.cpf' => "Insira um CPF válido",
             'cpf.formato_cpf' => "Insira o CPF na forma 111.222.333-44",
-            'cpf.digits' => "O cpf deve ter exatamente 11 digitos",
             'cep.required' => "Campo Obrigatório!",
-            'telefone.telefone' => "Digite primeiramente o DDD e em seguida o telefone na forma 99999-9999",
-            'telefone.digits' => "O telefone deve ter exatamente 11 digitos",
+            'telefone.telefone' => "Digite o telefone na forma 9999-9999",
             'complemento.required' => "Campo Obrigatório",
         ];
     }

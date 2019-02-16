@@ -30,8 +30,9 @@ class UserController extends Controller
 
     public function update(UserRequest $request, $id)
     {
-      $novo_usuario= $novo_usuario::find( $request->$novo_usuario_id);
+      $novo_usuario= User::findOrFail($id);
       $novo_usuario->atualizaUsuario($request);
+      return response()->json([$novo_usuario]);
     }
 
     public function destroy($id)

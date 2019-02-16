@@ -8,23 +8,23 @@ class Product extends Model
 {
   public function insereProduto($request){
 
-    $this->disponibilidade=$request->disponibilidade;
-    $this->descricao=$request->descricao;
-    $this->preco=$request->preco;
-    $this->nome=$request->nome;
-    $this->marca=$request->marca;
-    $this->tipo=$request->tipo;
+    $this->availability=$request->availability;
+    $this->description=$request->description;
+    $this->price=$request->price;
+    $this->name=$request->name;
+    $this->firm=$request->firm;
+    $this->type=$request->type;
 
     $this->save();
   }
   public function atualizaProduto($request){
     
-    $this->disponibilidade=$request->disponibilidade;
-    $this->descricao=$request->descricao;
-    $this->preco=$request->preco;
-    $this->nome=$request->nome;
-    $this->marca=$request->marca;
-    $this->tipo=$request->tipo;
+    $this->availability=$request->availability;
+    $this->description=$request->description;
+    $this->price=$request->price;
+    $this->name=$request->name;
+    $this->firm=$request->firm;
+    $this->type=$request->type;
     
     $this->save();
 
