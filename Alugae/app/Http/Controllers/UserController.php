@@ -40,4 +40,42 @@ class UserController extends Controller
       $novo_usuario=User::destroy($id);
       return response()->json(['Deletado!']);
     }
+
+
+    //Funções de usuário autenticado
+
+    public function reserveProduct($product_id)
+    {
+        $user = Auth::user();
+
+        $user->reserveProduct($product_id);
+
+        return response()->json(['Reservado']);
+
+    }
+
+    public function removeProduct()
+    {
+        $user = Auth::user();
+
+        $user->removeproduct();
+
+        return response()->json(['Removido']);
+
+    }
+
+    public function getProduct()
+    {
+        $user = Auth::user();
+        return response()->json([$user->product]);
+
+    }
+
+    public function getInfo()
+    {
+        $user = Auth::user();
+
+        return response()->json(['success' => $user], 200); //retorna as informações do usuário logado
+
+    }
 }

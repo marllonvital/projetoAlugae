@@ -2,16 +2,18 @@
 
 namespace App;
 
-use Laravel\Passport\HasApiTokens; //adicionar o "use" junto
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\product;
+
+use Laravel\Passport\HasApiTokens;
 
 class User extends Authenticatable
 {
-
     use Notifiable;
     use HasApiTokens;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -27,9 +29,18 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'//, 'is_admin'  comentado só por fins educativos não é
+                                    // legal permitir q usuários saibam que esse atributo existe
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
     public function insereUsuario($request){
       $this->name=$request->name;
       $this->cpf=$request->cpf;
@@ -54,5 +65,50 @@ class User extends Authenticatable
       $this->cep=$request->cep;
       $this->save();
     }
+
+
+    //exemplo de acessor
+    /*public function getNameAttribute($value)
+    {
+        return strtolower($value);
+    }*/
+
+    //exemplo de acessor para formatação de vários atributos
+    /*public function getAllInfoAttribute()
+    {
+        return "{$this->name} - {$this->email}";
+    }
+    protected $appends = ['all_info'];*/
+
+    //exemplo de mutator
+    /*public function setNameAttribute($value)
+    {
+        $this->attributes['name'] = strtolower($value);
+    }*/
+
+
+    //retorna o quarto
+    public function product(){
+        return $this->belongsTo('App\product');
+    }
+
+    //reserva o quarto ou falha
+    public function reserveproduct($product_id){
+        $product = product::findOrFail($product_id);
+
+        $product->newUsers([$this->id]);
+
+        return true;
+    }
+
+    public function removeproduct(){
+        $product = $this->product;
+
+        $product->removeUsers([$this->id]);
+
+        return true;
+    }
+
+
 
 }

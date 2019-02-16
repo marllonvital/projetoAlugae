@@ -65,4 +65,38 @@ class ProductController extends Controller
       $novo_produto=Product::destroy($id);
       return response()->json(['Deletado!']);
     }
+
+    public function getUsers($id)
+  {
+      $product = Product::findOrFail($id);
+      return response()->json([$product->users]);
+  }
+
+  //Request recebe users como string com ids separados por vírgula Ex:
+  // 1,2,3
+  public function putInProduct(Request $request, $product_id)
+  {
+      $product = Product::findOrFail($product_id);
+
+      //pega user como string e separa pelas vírgulas os ids em um array
+      $users = explode(',',$request->users);
+
+      $product->newUsers($users);
+
+      return response()->json([$product->users, $product]);
+  }
+
+  //Request recebe users como string com ids separados por vírgula Ex:
+  // 1,2,3
+  public function removeOfProduct(Request $request, $product_id)
+  {
+      $product = Product::findOrFail($product_id);
+
+      //pega user como string e separa pelas vírgulas os ids em um array
+      $users = explode(',',$request->users);
+
+      $product->removeUsers($users);
+
+      return response()->json([$product->users, $product]);
+  }
 }
