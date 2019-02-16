@@ -1,19 +1,19 @@
 /* Elementos */
 
 /* Classes */
-.viewport-1{
-  background-size: cover;
-  background-image: url(/assets/img/cover/home.jpg);
-  height: 100vh;
-}
 
 .card{
   background-color: #393F60;
-  border-radius: 15px;
-  margin-left: 60%;
-  margin-right: 5%;
-  margin-top: 5%;
-  position: absolute;
+  margin: 0;
+  border-radius: 0;
+  /* border-radius: 15px; */
+}
+
+.card .card-content{
+  border-radius: 0;
+}
+.card-content *{
+  margin-bottom: 3vh;
 }
 
 
@@ -30,4 +30,25 @@
 #chamada_login{
  color:#DFE2E2;
  margin-left: 5%;
+}
+
+@media (orientation: landscape){
+  .viewport-1{
+    background-size: cover;
+    background-image: url(/assets/img/cover/home.jpg);
+    height: 100vh;
+  }
+
+  .card{
+    background-color: #393F60;
+    border-radius: 15px;
+    margin-left: 60%;
+    margin-right: 5%;
+    margin-top: 5%;
+    position: absolute;
+  }
+
+  .card-content *{
+    margin-bottom: 1vh;
+  }
 }

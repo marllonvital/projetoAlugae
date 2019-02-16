@@ -1,13 +1,13 @@
-footer{
-
-}
 .page-footer{
 background-color: transparent;
+padding-top: 0vh;
+/* para o footer colar no conteúdo da página */
 }
 
 .main_footer{
   background: #95B2D0;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.5);
+  /* position: relative; */
   height: 7vh;
   bottom: 0;
   right: 0;
@@ -39,4 +39,9 @@ background-color: transparent;
 .links_footer{
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+}
+
+.container{
+  margin-bottom: 0vh;
+  /* para o footer colar no conteúdo da página */
 }
