@@ -11,6 +11,27 @@ h4,h5,h6, p {
   color:#575E8B;
 }
 
+
+
+
+input[type]:not(.browser-default){
+  background-color: white;
+  margin-bottom: 0;
+}
+
+input[type]:not(.browser-default):focus{
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* label color */
+ .input-field label {
+   color:#1CB3C8;
+ }
+ /* label focus color */
+ .input-field input[type]:focus + label {
+   color: #fff !important;
+ }
 .font_size_h1 {
   font-size: 4.2rem;
   line-height: normal;

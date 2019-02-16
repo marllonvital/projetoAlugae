@@ -6,6 +6,7 @@ import{SobreComponent} from './pages/sobre/sobre.component';
 import{LoginComponent} from './pages/login/login.component';
 import{ProdutosComponent} from './components/produtos/produtos.component';
 import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usuario.component';
+import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
 
 const routes: Routes = [
 
@@ -13,6 +14,7 @@ const routes: Routes = [
     {path: 'sobre', component: SobreComponent},
     {path: 'login', component: LoginComponent},
     {path:'cadastro-usuario',component: CadastroUsuarioComponent},
+    {path:'cadastro-produto',component: CadastroProdutoComponent},
     {path: '',redirectTo: '/home',pathMatch: 'full'}
 ];
 

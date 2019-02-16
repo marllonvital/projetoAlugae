@@ -28,6 +28,11 @@ font-family: 'Zilla Slab', serif; -->
   $(document).ready(function(){
     $('.carousel').carousel();
   });
+  $(document).ready(function() {
+   $('select').material_select();
+   $('#textarea1').val('New Text');
+  $('#textarea1').trigger('autoresize');
+ });
   </script>
 
 </body>
