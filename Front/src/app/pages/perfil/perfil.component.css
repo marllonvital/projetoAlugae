@@ -8,6 +8,7 @@
   box-sizing: border-box;
   border-radius: 10px;
   margin-right: 5%;
+  text-align: right;
 }
 
 .comentario_usuario{
@@ -64,10 +65,11 @@
   margin-right: 5%;
 }
 
+
 /* id */
 #img-circle {
   position: absolute;
-  width: 30%;
+  width: 8vw;
   border-radius: 50%;
   margin-left: 5%;
   margin-top: 20%;
@@ -80,19 +82,19 @@
   margin-left: 2%;
   margin-top: 2%;
   }
-  #img-circle_comentarios_usuario {
-    position: absolute;
-    width: 10%;
-    border-radius: 50%;
-    margin-left: 2%;
-    margin-top: 2%;
-    }
+
+#img-circle_comentarios_usuario {
+  position: absolute;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+  }
 
 #usuario_name{
-  position: absolute;
-  font-size: 1.6em;
-  margin-left: 40%;
+  /* font-size: 2.3vw; */
   margin-top: 2%;
+  text-align: right;
 }
 
 #usuario_name_comentario{

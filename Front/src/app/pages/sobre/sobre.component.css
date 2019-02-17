@@ -23,17 +23,23 @@
   margin: 0;
 }
 /* id */
+#banner{
+  height: 40vh;
+}
 
 #texto_box{
   text-align: center;
   margin-left: 30%;
 }
 
+#visao{
+  margin-bottom: 5vh;
+}
 
 @media (orientation: landscape) {
   .posicao{
-    position: absolute;
-    top: 70vh;
-    left: 15vw;
+    position: relative;
+    top: -20vh;
+    left: 5vw;
   }
 }
