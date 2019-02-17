@@ -33,7 +33,6 @@ Route::group(['middleware' => 'auth:api'], function() {
 //rotas que só podem ser acessadas com um user logado
 Route::group(['middleware' => 'auth:api'], function() {
 
-    //User Authenticated Routes
     //User Auth Routes
     Route::get('logout', 'Api\PassportController@logout');
 
@@ -44,7 +43,7 @@ Route::group(['middleware' => 'auth:api'], function() {
 
     // Admin Route
         Route::group(['middleware' => 'admin'], function () {
-          
+          Route::apiResource('users', 'UserController');
 
           Route::apiResource('product', 'ProductController');
           Route::get('prouct/listUsers/{id}', 'UserController@listUsers');
