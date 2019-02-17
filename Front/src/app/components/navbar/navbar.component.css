@@ -1,11 +1,6 @@
 
 /* CONFIGURAÇÕES NAV GERAL */
 
-.main_nav{
-  box-shadow: none;
-}
-
-
 nav.nav-extended .nav-wrapper{
   height: 11vh;
   background: linear-gradient(180deg, #393F60 0%, #575E8B 100%);
@@ -20,12 +15,16 @@ nav.nav-extended .nav-wrapper{
   width: 100%;
   background: #95B2D0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
+  /* A shadow não estava sendo castada sem a  position relative e eu nao tenho ideia do porquê */
   height: 9.65vh;
-  margin-bottom: 5vh;
+  /* margin-bottom: 5vh; */
+  /* z-index: 100; */
 }
 
 nav{
   background-color: transparent;
+  width: 100%;
 }
 
 
@@ -65,15 +64,6 @@ nav{
   height: 7vh;
 }
 
-.main_nav input[type=search]:not(.browser-default){
-  background-color: white;
-  margin-bottom: 0;
-}
-
-input[type=search]:not(.browser-default):focus{
-  box-shadow: none;
-  border-bottom: none;
-}
 
 .ally_nav input{
   margin-top: 3.5vh;

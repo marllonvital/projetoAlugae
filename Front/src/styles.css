@@ -1,3 +1,7 @@
+body{
+  background-color: #E8EBFF;
+}
+
 /* Elementos */
 h1, h2,h3{
   font-family: 'Zilla Slab', serif;
@@ -10,9 +14,6 @@ h4,h5,h6, p {
   font-weight: 300;
   color:#575E8B;
 }
-
-
-
 
 input[type]:not(.browser-default){
   background-color: white;
@@ -32,6 +33,10 @@ input[type]:not(.browser-default):focus{
  .input-field input[type]:focus + label {
    color: #fff !important;
  }
+
+
+/* TAMANHO DAS TAGS HEADER QUE PEGUEI NO MATERIALIZE.CSS E DEIXEI AQUI PARA
+PODER USAR EM BANNERS E ETC SEM ESTRAGAR O USO DE TAGS SEMÂNTICAS */
 .font_size_h1 {
   font-size: 4.2rem;
   line-height: normal;
@@ -90,9 +95,6 @@ input[type]:not(.browser-default):focus{
 }
 
 
-body{
-  background-color: #E8EBFF;
-}
 
 /* Classes */
 
@@ -123,10 +125,14 @@ body{
 .container{
   margin: 0;
   max-width: 100vw;
-  width: 100vw;
+  width: 100%;
 }
 
-div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p{
+.row .col{
+  padding: 0;
+}
+
+div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p, section.container h1, section.container h2, section.container h3, section.container h4, section.container h5, section.container h6, section.container p{
   padding: 0 3vw 0 3vw;
 }
 
@@ -135,9 +141,6 @@ div.container h1, div.container h2, div.container h3, div.container h4, div.cont
 }
 
 
-.row .col{
-  padding: 0;
-}
 
 
 
@@ -147,10 +150,6 @@ div.container h1, div.container h2, div.container h3, div.container h4, div.cont
     margin: 0vw 10vw 5vh 10vw;
     max-width: 100vw;
     width: 80%;
-    padding: 0;
-  }
-
-  div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p{
     padding: 0;
   }
 }
