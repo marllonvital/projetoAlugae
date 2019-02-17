@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ProductRequest;
 use Illuminate\Http\Request;
 use App\Product;
@@ -26,9 +27,20 @@ class ProductController extends Controller
      */
     public function store(ProductRequest $request)
     {
-      $novo_produto= new Product;
-      $novo_produto->insereProduto($request);
-      return response()->json([$novo_produto]);
+      $newProduct= new Product;
+      $newProduct->insereProduto($request);
+
+       if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
+            Storage::makeDirectory('localPhotos/',0775,true);
+
+      $validator = Validator::make($request->all(), [
+        'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+      ]);
+
+      $file = $request->file('photo');
+      $path = $file->store('localPhotos');
+      $products->photo = $file;
+      return response()->json([$newProduct]);
     }
     /**
      * Display the specified resource.
@@ -38,8 +50,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-      $novo_produto = Product::findOrFail($id);
-      return response()->json([$novo_produto]);
+      $newProduct = Product::findOrFail($id);
+      return response()->json([$newProduct]);
     }
     /**
      * Update the specified resource in storage.
@@ -50,9 +62,9 @@ class ProductController extends Controller
      */
     public function update(ProductRequest $request, $id)
     {
-      $novo_produto= Product::findOrFail($id);
-      $novo_produto->atualizaProduto($request);
-      return response()->json([$novo_produto]);
+      $newProduct= Product::findOrFail($id);
+      $newProduct->atualizaProduto($request);
+      return response()->json([$newProduct]);
     }
     /**
      * Remove the specified resource from storage.
@@ -62,7 +74,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-      $novo_produto=Product::destroy($id);
+      $newProduct=Product::destroy($id);
       return response()->json(['Deletado!']);
     }
 }
