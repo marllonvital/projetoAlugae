@@ -70,6 +70,10 @@ div.card-title.row{
   width: 100%;
 }
 
+#momento_section{
+  margin-left: 10vw;
+}
+
 div.card-title.row a{
   margin: 1.78rem 0 1.424rem 0;
 }
