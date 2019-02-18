@@ -17,6 +17,9 @@ import { LoginService } from './service/login.service';
 import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ProdutoComponent } from './pages/produto/produto.component';
+import { CategoriaCozinhaComponent } from './pages/categoria-cozinha/categoria-cozinha.component';
+import { CategoriaLivroComponent } from './pages/categoria-livro/categoria-livro.component';
+import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categoria-eletronico.component';
 
 
 
@@ -34,6 +37,9 @@ import { ProdutoComponent } from './pages/produto/produto.component';
     CadastroProdutoComponent,
     PerfilComponent,
     ProdutoComponent,
+    CategoriaCozinhaComponent,
+    CategoriaLivroComponent,
+    CategoriaEletronicoComponent,
   ],
   imports: [
     BrowserModule,

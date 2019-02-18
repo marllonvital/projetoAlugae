@@ -56,3 +56,36 @@
 #tipo{
   margin-left: 8%;
 }
+
+
+  @media (max-width: 600px){
+
+    .icone{
+      width: 60%;
+      margin-left:20%;
+      margin-top: 20%;
+    }
+    #texto_warning{
+      color:#DFE2E2;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 36px;
+      text-align: center;
+      font-size: 1.3em;
+      margin-left: 0%;
+    }
+
+    #tipo{
+      margin-left: 0%;
+    }
+    .botao{
+      margin-left: 30%;
+      margin-top: 10%;
+    }
+    .input_margin{
+      padding-right: 0%;
+    }
+
+  }
