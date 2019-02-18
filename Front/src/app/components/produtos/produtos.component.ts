@@ -10,7 +10,7 @@ import {MaterializeAction} from "angular2-materialize"
 export class ProdutosComponent implements OnInit {
 
   @ViewChild('carousel') carouselElement;
- actions = new EventEmitter<string>();
+ actions = new EventEmitter<any>();
 
   produto: any[]=[
     {nome: "Super Nintendo ",
@@ -30,7 +30,6 @@ export class ProdutosComponent implements OnInit {
   "https://picsum.photos/1000/?random",
 
 ];
-  // constructor() { }
 
    showInitialized = false;
 

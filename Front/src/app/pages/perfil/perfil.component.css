@@ -51,7 +51,8 @@
   box-sizing: border-box;
   margin-bottom: 0%;
   border-radius: 10px 10px 0px 0px;
-  margin-right: 5%;
+  border-bottom: 0px;
+
 }
 .configuracao_perfil{
   background: #575E8B;
@@ -60,7 +61,7 @@
   border-radius: 0px 0px 10px 10px;
   button-align: center;
   margin-top: 0%;
-  margin-right: 5%;
+
 }
 
 /* id */
@@ -176,4 +177,12 @@
   font-size: 1.5em;
   color:#575E8B;
   margin-top: 10%;
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+  .container{
+    margin: 0vw 5vw 5vh 5vw;
+    max-width: 100%;
+    width: 90%;
+  }
 }

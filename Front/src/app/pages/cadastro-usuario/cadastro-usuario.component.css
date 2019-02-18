@@ -6,6 +6,7 @@
   background-color: #393F60;
   margin: 0;
   border-radius: 0;
+  margin-top: 5vh;
 }
 
 .logo{
@@ -14,10 +15,7 @@
     border-radius: 0;
   }
 
-  .btn{
-    padding-right:7vw;
-    padding-left: 7vw;
-  }
+
 
 /* Ids */
 

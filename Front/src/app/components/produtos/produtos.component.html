@@ -3,6 +3,7 @@
   <a class="right content-indicator waves-effect waves-light col s1 m1 l1" (click)="moveNextCarousel()"><i class="material-icons middle-indicator-text">chevron_right</i></a>
 
 
+
   <div #carousel class="carousel" [ngClass]="{ 'initialized': showInitialized }" materialize="carousel" [materializeActions]="actions" [materializeParams]="[{dist:0, padding:30}]">
     <a *ngFor="let url of imageURLs" class="carousel-item">
      <div class="card">

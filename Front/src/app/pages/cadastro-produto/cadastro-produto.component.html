@@ -1,55 +1,70 @@
 <section>
-  <form  action="index.html" method="post">
-  <div class="card card_principal">
-    <div class="card-content">
+  <form  #addForm="ngForm" (ngSubmit)="save(addForm)">
+    <div class="card card_principal">
+      <div class="card-content">
 
-      <div class="row">
-        <div class="col s12 m4 l4 input_margin">
-          <h4 id="texto_cadastro">Cadastro de Produto</h4>
-          <input class="input_margin"  type="text" id="nome_produto">
-          <label> Nome do Produto</label>
-          <input class="input_margin materialize-textarea" type="text" id="descricao_produto">
-          <label> Descrição do Produto</label>
-          <div class="row">
-            <div class="col s12 m6 l6">
-              <input type="text" id="preco_diaria">
-              <label> Preço da Diária</label>
-            </div>
-            <div class="col s12 m5 l5 "id = "tipo">
-                <select class="browser-default">
-                  <option value="" >Tipo</option>
-                  <option value="1">Eletrônicos</option>
-                  <option value="2">Livros</option>
-                  <option value="3">Cozinha</option>
+        <div class="row">
+          <div class="col s12 m4 l4 input_margin">
+            <h4 id="texto_cadastro">Cadastro de Produto</h4>
+            <input
+            class="input_margin"
+            type="text"
+            name="nome_produto"
+            id="nome_produto"
+            ngModel>
+            <label for="nome_produto"> Nome do Produto</label>
+            <input
+            class="input_margin materialize-textarea"
+            type="text"
+            name="descricao_produto"
+            id="descricao_produto"
+            ngModel>
+            <label for="descricao_produto"> Descrição do Produto</label>
+            <div class="row">
+              <div class="col s12 m6 l6">
+                <input
+                type="text"
+                name="preco_diaria"
+                id="preco_diaria"
+                ngModel>
+                <label for="preco_diaria"> Preço da Diária</label>
+              </div>
+              <div class="col s12 m5 l5 "id="tipo">
+                <select class="browser-default" name="tipo" ngModel>
+                  <option disabled value="" >Tipo</option>
+                  <option value="eletronicos">Eletrônicos</option>
+                  <option value="livros">Livros</option>
+                  <option value="cozinha">Cozinha</option>
                 </select>
+              </div>
+            </div>
+            <input name="produto_marca" class="input_margin" type="text" id="produto_marca" ngModel>
+            <label for="produto_marca"> Marca</label>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card card_imagem">
+              <div class="card-content">
+                <img class="imagem " src="../../../assets/img/icones/picture.png"  alt="icone de uma imagem">
+              </div>
+            </div>
+            <div class="file-field input-field">
+              <div class="file-path-wrapper">
+                <div class="btn">
+                  <span>Adicionar Imagem</span>
+                  <input class="file-path validate" type="file" name="imagem_submit" id="imagem_submit" ngModel >
+                </div>
+              </div>
             </div>
           </div>
-          <input class="input_margin" type="text" id="produto_marca">
-          <label> Marca</label>
-        </div>
-
-
-
-
-        <div class="col s12 m4 l4">
-          <div class="card card_imagem">
-            <div class="card-content">
-              <img class="imagem " src="../../../assets/img/icones/picture.png"  alt="icone de uma imagem">
-            </div>
+          <div class="col s12 m4 l4 ">
+            <img class ="icone" src="../../../assets/img/icones/warning.png" alt="Icone de Atenção">
+            <h5 id="texto_warning">ATENÇÂO!</h5>
+            <h5 id="texto_warning">  Em caso de perta, quebra ou furto. Será cobrado uma multa de até 50X o valor semanal.</h5>
+            <button type="submit" name="cadastro_produto" class="waves-effect waves-light btn botao center-align"> Cadastrar</button>
           </div>
-          <button type="submit" name="imagem_submit" class="btn"> Adicionar Imagem</button>
         </div>
-
-        <div class="col s12 m4 l4 ">
-          <img class ="icone" src="../../../assets/img/icones/warning.png" alt="Icone de Atenção">
-          <h5 id="texto_warning">ATENÇÂO!</h5>
-          <h5 id="texto_warning">  Em caso de perta, quebra ou furto. Será cobrado uma multa de até 50X o valor semanal.</h5>
-          <button type="submit" name="cadastro_produto" class="waves-effect waves-light btn botao center-align"> Cadastrar</button>
-        </div>
-
       </div>
     </div>
-  </div>
-  <img class="view-port hide-on-small-only"src="../../../assets/img/cover/cadastro2.jpg" alt="Pessoa escrevendo com caneta piloto em uma caixa de papelão">
+    <img class="view-port hide-on-small-only"src="../../../assets/img/cover/cadastro2.jpg" alt="Pessoa escrevendo com caneta piloto em uma caixa de papelão">
   </form>
 </section>

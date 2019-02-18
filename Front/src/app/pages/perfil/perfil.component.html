@@ -1,7 +1,7 @@
 <section class="container">
   <div class="row">
-    <div class="col s4 ">
-      <div class="card perfil ">
+    <div class="row col s12 m12 l4 ">
+      <div class="col s12 m6 l12 card perfil">
         <div class="card-image">
           <img id="image_banner"src="assets/img/banners/perfil.jpg" alt="paisagem de montanhas">
           <img id="img-circle"src="assets/img/perfil_provisorio/perfil_provisorio.jpg" alt="Emma watson">
@@ -24,24 +24,29 @@
           </div>
         </div>
       </div>
-      <div class="card lista_desejos">
-        <div class="card-content">
-          <h3 class="lista_text">Lista de Desejos</h3>
+
+      <div class="row col s12 m5 l12">
+        <div class="col s12 m12 l12 card lista_desejos">
+          <div class="card-content">
+            <h3 class="lista_text">Lista de Desejos</h3>
+          </div>
+        </div>
+        <div class="col s12 m12 l12  card configuracao_perfil">
+          <div class="card-content">
+            <a class="btn waves-effect waves-light botao_configuracao" href="/congiguracao_perfil" >Configuração</a>
+          </div>
         </div>
       </div>
-      <div class="card configuracao_perfil">
-        <div class="card-content">
-          <a class="btn waves-effect waves-light botao_configuracao" href="/congiguracao_perfil" >Configuração</a>
-        </div>
-      </div>
+
     </div>
-    <div class="col s8">
+
+    <div class="col s12 m12 offset-l1 l7">
       <div class="card comentario_usuario">
         <div class="card-image">
             <img id="img-circle_comentarios_usuario" src="assets/img/perfil_provisorio/perfil_provisorio2.jpg" alt="Hayao Miyazaki">
             <div class="card-content" id="comentario_usuario">
               <form class="comentario_text row" action="index.html" method="post">
-                  <div class="col s8">
+                  <div class="col s6">
                       <input type="text" id="comentario">
                   </div>
                 <div class="col s4">
