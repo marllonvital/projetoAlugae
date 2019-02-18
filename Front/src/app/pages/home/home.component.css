@@ -3,6 +3,10 @@ h5{
   margin-bottom: 40%;
 }
 
+h3{
+  font-size: 2.5rem;
+}
+
 /* Classes */
 
 .botao{
@@ -64,11 +68,25 @@ h5{
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-div.card-title.row{
+div.card-title{
   /* ajeitando o botão em cima da imagem, é mais fácil aumentar isso aqui
    que fazer mais umas 3 classes só pra posicionar o botão direito */
   width: 100%;
+  height: 100%
 }
+.texto_mobile{
+  position: absolute;
+  top: 35%;
+  left: 0%
+}
+
+.veja_mais{
+  position: absolute;
+  top: 58%;
+  left: 73%;
+  padding: 1vw;
+}
+
 
 #momento_section{
   margin-left: 10vw;
@@ -78,6 +96,17 @@ div.card-title.row a{
   margin: 1.78rem 0 1.424rem 0;
 }
 
+/* @media (min-width: 892px) and (max-width: 992px) {
+  .cards-container{
+    margin-top: 5vh;
+  }
+} */
+@media only screen and (min-width: 892px) and (max-width: 1049px) {
+  .cards-container{
+    margin-top: 5vh;
+  }
+
+}
 @media (orientation: landscape) {
   .font_size_h3{
     font-size: 4vw;

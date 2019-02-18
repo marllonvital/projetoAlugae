@@ -203,3 +203,9 @@ nav .sidenav-trigger i{
   font-size: 9vh;
   font-weight: 100;
 }
+
+@media (min-width: 893px) and (max-width: 1200px){
+  .logo_size{
+    height: 7vh;
+  }
+}

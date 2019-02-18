@@ -2,6 +2,16 @@
 
 
 /* Classe */
+.botao_alugar{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+.botao_favoritos{
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: #95B2D0;
+  text-align: center;
+}
 .perfil{
   background: #FFFFFF;
   border: 3px solid #95B2D0;
@@ -23,8 +33,26 @@
   box-sizing: border-box;
   border-radius: 10px;
 }
-.comentario_text{
+.card_descricao_produto{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
 
+.card_detalhes{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 0px 10px 10px 0px;
+}
+.imagem_produto{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px 0px 0px 10px;
+}
+.comentario_text{
   margin-left: 15%;
   margin-top: 5%;
 }
@@ -38,31 +66,13 @@
   text-align: center;
 }
 
-.botao_configuracao{
-  margin-left: 15%;
-}
-
-.botao{
-  margin-top:
-}
-.lista_desejos{
+.outros_produtos{
   background: #FFFFFF;
   border: 3px solid #95B2D0;
   box-sizing: border-box;
-  border-radius: 10px;
   margin-bottom: 0%;
-  border-radius: 10px 10px 0px 0px;
-  border-bottom: 0px;
-
-}
-.configuracao_perfil{
-  background: #575E8B;
-  border: 3px solid #95B2D0;
-  box-sizing: border-box;
-  border-radius: 0px 0px 10px 10px;
-  button-align: center;
-  margin-top: 0%;
-
+  border-radius: 10px;
+  margin-right: 5%;
 }
 
 /* id */
@@ -80,14 +90,19 @@
   border-radius: 50%;
   margin-left: 2%;
   margin-top: 2%;
-  }
-  #img-circle_comentarios_usuario {
-    position: absolute;
-    width: 10%;
-    border-radius: 50%;
-    margin-left: 2%;
-    margin-top: 2%;
-    }
+}
+#img-circle_comentarios_usuario {
+  position: absolute;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+#img_produdo{
+  border: 3px solid #95B2D0;
+  width: 80%;
+  margin-bottom: 14%;
+}
 
 #usuario_name{
   position: absolute;
@@ -180,10 +195,19 @@
   margin-top: 10%;
 }
 
-@media (orientation: portrait) and (max-width: 600px) {
-  .container{
-    margin: 0vw 5vw 5vh 5vw;
-    max-width: 100%;
-    width: 90%;
-  }
+#texto_descricao{
+  ont-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+  font-size: 1.5em;
+  color:#575E8B;
+}
+
+#titulo_descricao{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2em;
 }
