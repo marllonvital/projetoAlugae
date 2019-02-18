@@ -20,11 +20,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('login', 'API\PassportController@login');
 Route::post('register', 'API\PassportController@register');
 Route::get('show-img', 'api\ProductController@showPhoto');
+Route::post('product-add', 'ProductController@store');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
     Route::post('get-details', 'API\PassportController@getDetails');
-    Route::post('product-add', 'ProductController@store');
 
     Route::get('user/{id}', 'UserController@show');
     Route::put('user/reserveProduct/{product_id}', 'UserController@reserveProduct');
@@ -36,11 +36,9 @@ Route::group(['middleware' => 'admin'], function () {
     Route::put('product/putInRent/{rent_id}', 'ProductController@putInProduct');
     Route::put('product/removeOfProduct/{product_id}', 'ProductController@removeOfProduct');
 
-    Route::resources([
-      'users' => 'UserController',
-      'rents' => 'RentController',
-      'products' => 'ProductController',
-      'categories' => 'CategoryController',
-      'bank_informations' => 'Bank_InformationController',
-    ]);
+    Route::apiResource('product', 'ProductController');
+    Route::apiResource('user', 'UserController');
+    Route::apiResource('rent', 'RentController');
+    Route::apiResource('category', 'CategoryController');
+    Route::apiResource('bank_information', 'Bank_InformationController');
 });

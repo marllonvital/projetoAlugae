@@ -21,6 +21,7 @@ export class CadastroProdutoComponent implements OnInit {
     let produto = addForm.value;
     this.cadastroProdutoService.addProduto(produto).subscribe(
       res => {
+        console.log(res);
         this.produtos.push({
           name:produto.nome_produto,
           description:produto.descricao_produto,

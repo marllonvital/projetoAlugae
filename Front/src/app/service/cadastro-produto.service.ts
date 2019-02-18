@@ -9,7 +9,7 @@ import { Observable} from 'rxjs';
 })
 export class CadastroProdutoService {
 
-  apiUrl = "http://localhot:8000/api/product-add";
+  apiUrl = "http://localhost:8000/api/product-add";
 
 
 

@@ -30,7 +30,7 @@ class User extends Authenticatable
     public function insereUsuario($request){
       $this->name=$request->name;
       $this->cpf=$request->cpf;
-      $this->password=$request->password;
+      $this->password=bcrypt($request->password);
       $this->email=$request->email;
       $this->city=$request->city;
       $this->telephone=$request->telephone;
