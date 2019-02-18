@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Component, EventEmitter, ViewChild} from "@angular/core"
+import { EventEmitter, ViewChild} from "@angular/core"
 import {MaterializeAction} from "angular2-materialize"
 
 @Component({

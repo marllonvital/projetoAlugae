@@ -8,7 +8,10 @@ import{ProdutoComponent} from './pages/produto/produto.component';
 import{ProdutosComponent} from './components/produtos/produtos.component';
 import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usuario.component';
 import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
-import{PerfilComponent} from './pages/perfil/perfil.component';
+import { CategoriaCozinhaComponent } from './pages/categoria-cozinha/categoria-cozinha.component';
+import { CategoriaLivroComponent } from './pages/categoria-livro/categoria-livro.component';
+import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categoria-eletronico.component';
+import {PerfilComponent} from './pages/perfil/perfil.component';
 const routes: Routes = [
 
     {path: 'home', component: HomeComponent},
@@ -16,6 +19,9 @@ const routes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'perfil', component: PerfilComponent},
     {path:'produto',component: ProdutoComponent},
+    {path:'categoria-cozinha',component: CategoriaCozinhaComponent},
+    {path:'categoria-livro',component: CategoriaLivroComponent},
+    {path:'categoria-eletronico',component: CategoriaEletronicoComponent},
     {path:'cadastro-usuario',component: CadastroUsuarioComponent},
     {path:'cadastro-produto',component: CadastroProdutoComponent},
     {path: '',redirectTo: '/home',pathMatch: 'full'}
