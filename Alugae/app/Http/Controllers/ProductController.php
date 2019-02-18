@@ -77,4 +77,9 @@ class ProductController extends Controller
       $newProduct=Product::destroy($id);
       return response()->json(['Deletado!']);
     }
+
+    public function showPhoto()
+    {
+        return response()->download($path, $product->photo);
+    }
 }
