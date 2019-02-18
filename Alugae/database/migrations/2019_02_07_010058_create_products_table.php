@@ -12,7 +12,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('type');
             $table->string('name');
-            $table->string('firm');
+            $table->string('brand');
             $table->string('photo');
             $table->integer('price');
             $table->string('description');

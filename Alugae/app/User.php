@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Product;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -9,27 +10,21 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-
     use Notifiable;
     use HasApiTokens;
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
     protected $fillable = [
         'name', 'email', 'password',
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
-        'password', 'remember_token',
+        'password', 'remember_token'//, 'is_admin'  comentado só por fins educativos não é
+                                    // legal permitir q usuários saibam que esse atributo existe
     ];
 
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
     public function insereUsuario($request){
       $this->name=$request->name;
       $this->cpf=$request->cpf;
@@ -40,6 +35,7 @@ class User extends Authenticatable
       $this->number=$request->number;
       $this->complement=$request->complement;
       $this->cep=$request->cep;
+
       $this->save();
     }
     public function atualizaUsuario($request){
@@ -52,7 +48,31 @@ class User extends Authenticatable
       $this->number=$request->number;
       $this->complement=$request->complement;
       $this->cep=$request->cep;
+
       $this->save();
     }
+
+    public function product(){
+        return $this->belongsTo('App\product');
+    }
+
+    //reserva o quarto ou falha
+    public function reserveproduct($product_id){
+        $product = product::findOrFail($product_id);
+
+        $product->newUsers([$this->id]);
+
+        return true;
+    }
+
+    public function removeproduct(){
+        $product = $this->product;
+
+        $product->removeUsers([$this->id]);
+
+        return true;
+    }
+
+
 
 }

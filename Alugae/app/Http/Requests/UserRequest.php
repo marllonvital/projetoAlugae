@@ -22,16 +22,20 @@ class UserRequest extends FormRequest
                 'email' => 'required|email',
                 'cpf' => 'required|cpf|formato_cpf',
                 'cep' => 'required|numeric',
+                'city' => 'required|string',
+                'number' => 'required|numeric',
                 'telephone' => 'string|telefone',
                 'complement' => 'required|string',
             ];
-            }
+        }
         if($this->isMethod('put')){
             return [
                 'name' => 'string',
                 'email' => 'email',
                 //'cpf' => 'unique:users,cpf,'.$this->users->id,
                 'cep' => 'numeric',
+                'city' => 'string',
+                'number' => 'numeric',
                 'telephone' => 'string|telefone',
                 'complement' => 'string',
                 ];

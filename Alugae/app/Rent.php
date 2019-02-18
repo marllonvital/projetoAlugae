@@ -8,7 +8,6 @@ class Rent extends Model
 {
   public function insereAluguel($request){
     
-    $this->historic=$request->historic;
     $this->quantity=$request->quantity;
     $this->date_final=$request->date_final;
     $this->date_initial=$request->date_initial;
