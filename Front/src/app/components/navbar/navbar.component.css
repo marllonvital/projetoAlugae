@@ -27,7 +27,9 @@ nav{
   width: 100%;
 }
 
-
+.login_provisorio{
+  margin-left: 30%;
+}
 
 
 /* __________________________________________________________________________________________________________________________ */
@@ -203,3 +205,20 @@ nav .sidenav-trigger i{
   font-size: 9vh;
   font-weight: 100;
 }
+
+/* __________________________________________________________________________________________________________________________ */
+
+  /* CONFIGURAÇÕES SIDENAV */
+
+  .side-nav{
+    background: linear-gradient(180deg, #393F60 0%, #575E8B 100%);
+  }
+  .fundo_active{
+    background-color: #95B2D0;
+    margin-bottom: 2%;
+    color:#1CB3C8;
+  }
+
+  .color{
+    color: white;
+  }

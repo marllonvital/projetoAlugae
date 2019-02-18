@@ -19,7 +19,6 @@
         <input id="search" type="search" placeholder="Procure um produto para alugar:" required>
       </div>
       <a class="btn waves-light col l1 hide-on-med-and-down valign-wrapper" type="submit" name="busca">Busca</a>
-      <a href="/login" class="login_provisorio">Login</a>
     </form>
     <!-- <div class="perfil_logado" *ngIF="logado">
     </div> -->
@@ -42,14 +41,20 @@
     </div>
   </div>
 </nav>
-
-<ul class="side-nav" id="mobile-demo">
-    <div class="default_bg side_header">
-      <a href="home.html" class="brand-logo right"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
-    </div>
-    <li routerLinkActive="active"><a href="/art_gallery">Eletrônicos</a></li>
-    <li routerLinkActive="active"><a href="/articles">Livros</a></li>
-    <li routerLinkActive="active"><a href="/about">Cozinha</a></li>
-    <li routerLinkActive="active"><a href="/contact">Lista de desejos</a></li>
-    <li routerLinkActive="active"><a href="/about">Cadastrar Item</a></li>
-  </ul>
+<section>
+  <div class="row">
+    <ul class="side-nav" id="mobile-demo">
+        <div class="default_bg side_header col s12 m12">
+          <a href="home.html" class="brand-logo left"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
+        </div>
+        <div class="col s12 m12">
+          <li routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">account_box</i>Perfil</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">favorite</i>Lista de Desejos</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-eletronico"><i class="material-icons">tv</i>Eletrônicos</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-livros"><i class="material-icons">book</i>Livros</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-cozinha"><i class="material-icons">local_dining</i>Cozinha</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/cadastro-produto"><i class="material-icons color">add_box</i>Cadastrar Item</a></li>
+        </div>
+      </ul>
+  </div>
+</section>
