@@ -20,7 +20,7 @@ class ProductRequest extends FormRequest
             return[
                 'name' => 'required|string',
                 'type' => 'required|string',
-                'firm' => 'required|string',
+                'brand' => 'required|string',
                 'price' => 'required|numeric',
                 'description' => 'required|string',
                 'availability' => 'string',
@@ -30,7 +30,7 @@ class ProductRequest extends FormRequest
             return [
                 'name' => 'string',
                 'type' => 'string',
-                'firm' => 'string',
+                'brand' => 'string',
                 'price' => 'string',
                 'description' => 'string',
                 'availability' => 'string',
@@ -47,7 +47,7 @@ class ProductRequest extends FormRequest
             'name.required' => "Campo Obrigatório!",
             'type.required' => "Campo Obrigatório!",
             'type.string' => "O campo deve ser preenchido com uma das categorias disponiveis",
-            'firm.required' => "Campo Obrigatório",
+            'brand.required' => "Campo Obrigatório",
             'price.required' => "Campo Obrigatório!",
             'description.required' => "Campo Obrigatório!",
         ];

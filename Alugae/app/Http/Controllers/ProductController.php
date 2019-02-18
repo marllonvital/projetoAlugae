@@ -20,17 +20,6 @@ class ProductController extends Controller
     {
       $newProduct= new Product;
       $newProduct->insereProduto($request);
-
-       if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
-            Storage::makeDirectory('localPhotos/',0775,true);
-
-      $validator = Validator::make($request->all(), [
-        'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
-      ]);
-
-      $file = $request->file('photo');
-      $path = $file->store('localPhotos');
-      $products->photo = $file;
       return response()->json([$newProduct]);
     }
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\ConfirmationRegister;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 use Illuminate\Http\Request;
 use App\User;
@@ -21,6 +22,7 @@ class UserController extends Controller
 
       $newUser->insereUsuario($request);
       $newUser->notify(new ConfirmationRegister($newUser));
+
       return response()->json(['Usuario Cadastrado!']);
     }
 
@@ -52,7 +54,6 @@ class UserController extends Controller
         $user = Auth::user();
 
         $user->reserveProduct($product_id);
-
         return response()->json(['Reservado']);
 
     }

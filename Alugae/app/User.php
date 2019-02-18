@@ -4,7 +4,9 @@ namespace App;
 
 use App\Product;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -36,12 +38,22 @@ class User extends Authenticatable
       $this->complement=$request->complement;
       $this->cep=$request->cep;
 
+      if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
+            Storage::makeDirectory('localPhotos/',0775,true);
+
+      $validator = Validator::make($request->all(), [
+        'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+      ]);
+
+      $file = $request->file('photo');
+      $path = $file->store('localPhotos');
+      $this->photo = $file;
       $this->save();
     }
     public function atualizaUsuario($request){
       $this->name=$request->name;
       $this->cpf=$request->cpf;
-      $this->password=$request->password;
+      $this->password=bcrypt($request->password);
       $this->email=$request->email;
       $this->city=$request->city;
       $this->telephone=$request->telephone;

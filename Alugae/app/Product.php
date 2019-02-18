@@ -3,17 +3,29 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class Product extends Model
 {
   public function insereProduto($request){
 
-    $this->availability=$request->availability;
     $this->description=$request->description;
     $this->price=$request->price;
     $this->name=$request->name;
     $this->brand=$request->brand;
     $this->type=$request->type;
+
+    if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
+            Storage::makeDirectory('localPhotos/',0775,true);
+
+    $validator = Validator::make($request->all(), [
+      'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+    ]);
+
+    $file = $request->file('photo');
+    $path = $file->store('localPhotos');
+    $this->photo = $file;
 
     $this->save();
   }
@@ -27,14 +39,6 @@ class Product extends Model
     $this->type=$request->type;
 
     $this->save();
-  }
-
-  public function  users(){
-      return $this->belongsTo('App\User');
-  }
-
-  public function  users(){
-      return $this->hasMany('App\User');
   }
 
   public function newUsers($user_ids){
@@ -53,8 +57,7 @@ class Product extends Model
 
           return true;
       }
-
-  }
+    }
 
   public function removeUsers($user_ids){
 
@@ -66,9 +69,7 @@ class Product extends Model
           $this->products_remaining += 1;
           $this->save();
       }
-
       return true;
-
   }
 
 }
