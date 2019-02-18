@@ -55,7 +55,7 @@ class UserRequest extends FormRequest
             'cpf.cpf' => "Insira um CPF válido",
             'cpf.formato_cpf' => "Insira o CPF na forma 111.222.333-44",
             'cep.required' => "Campo Obrigatório!",
-            'telephone.telephone' => "Digite o telephone na forma 9999-9999",
+            'telephone.telefone' => "Digite o telephone na forma 9999-9999",
             'complement.required' => "Campo Obrigatório",
         ];
     }

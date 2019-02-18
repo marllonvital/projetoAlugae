@@ -1,8 +1,11 @@
+
 <?php
 
 namespace App\Http\Controllers\API;
 
+
 use Illuminate\Support\Facades\Validator;
+use App\Http\Requests\UserRequest;
 use Auth;
 use App\User;
 use DB;
@@ -15,7 +18,6 @@ class PassportController extends Controller
 
     public function login(){
         if (Auth::attempt(['email'=>request('email'), 'password'=>request('password')])){
-
             $user = Auth::user();
             $success['token'] = $user->createToken('MyApp')->accessToken;
             return response()->json(['success'=>$success], $this->successStatus);
@@ -25,27 +27,11 @@ class PassportController extends Controller
         }
     }
 
-    public function register(Request $request) {
-      $validator = Validator::make($request->all(), [
-
-          'name' => 'required',
-          'email' => 'required|email',
-          'password' => 'required',
-          'c_password' => 'required|same:password',
-
-      ]);   
-      if ($validator -> fails()) {
-          return response()->json(['error'=>$validator->errors()], 401);
-      }
-
-      $newUser = new User;
-      $newUser->name = $request->name;
-      $newUser->email = $request->email;
-      $newUser->password = bcrypt($request->password);
-      $success['name'] = $newUser->name;
+    public function register(UserRequest $request) {
+        $newUser = new User;
+        $newUser->insereUsuario($request);
+      
       $success['token'] = $newUser->createToken('MyApp')->accessToken;
-      $newUser->save();
-
       return response()->json(['success'=>$success],$this->successStatus);
       }
 
