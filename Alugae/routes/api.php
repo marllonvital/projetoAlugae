@@ -35,12 +35,10 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('product/listUsers/{id}', 'UserController@listUsers');
     Route::put('product/putInRent/{rent_id}', 'ProductController@putInProduct');
     Route::put('product/removeOfProduct/{product_id}', 'ProductController@removeOfProduct');
-
-    Route::resources([
-      'users' => 'UserController',
-      'rents' => 'RentController',
-      'products' => 'ProductController',
-      'categories' => 'CategoryController',
-      'bank_informations' => 'Bank_InformationController',
-    ]);
+    
+    Route::apiResource('product', 'ProductController');
+    Route::apiResource('user', 'UserController');
+    Route::apiResource('rent', 'RentController');
+    Route::apiResource('category', 'CategoryController');
+    Route::apiResource('bank_information', 'Bank_InformationController');
 });
