@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Notifications\ConfirmationRent;
 use Illuminate\Http\Request;
 use App\Rent;
 class RentController extends Controller
@@ -24,8 +25,9 @@ class RentController extends Controller
      */
     public function store(Request $request)
     {
-      $novo_aluguel= new Rent;
-      $novo_aluguel->insereAluguel($request);
+      $newRent= new Rent;
+      $newRent->notify(new ConfirmationRent($newRent));
+      $newRent->insereAluguel($request);
     }
 
     /**
@@ -36,8 +38,8 @@ class RentController extends Controller
      */
     public function show($id)
     {
-      $novo_aluguel = Rent::findOrFail($id);
-      return response()->json([$novo_aluguel]);
+      $newRent = Rent::findOrFail($id);
+      return response()->json([$newRent]);
     }
 
     /**
@@ -49,9 +51,9 @@ class RentController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $novo_aluguel= Rent::findOrFail($id);
-      $novo_aluguel->atualizaAluguel($request);
-      return response()->json([$novo_aluguel]);
+      $newRent= Rent::findOrFail($id);
+      $newRent->atualizaAluguel($request);
+      return response()->json([$newRent]);
     }
 
     /**
@@ -62,7 +64,7 @@ class RentController extends Controller
      */
     public function destroy($id)
     {
-      $novo_aluguel=Rent::destroy($id);
+      $newRent=Rent::destroy($id);
       return response()->json(['Deletado!']);
     }
 }

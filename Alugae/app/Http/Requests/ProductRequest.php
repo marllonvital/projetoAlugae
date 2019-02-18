@@ -18,22 +18,22 @@ class ProductRequest extends FormRequest
     {
         if($this->isMethod('post')){
             return[
-                'nome' => 'required|string',
-                'tipo' => 'required|string',
-                'marca' => 'required|string',
-                'preco' => 'required|numeric',
-                'descricao' => 'required|string',
-                'disponibilidade' => 'required|string',
+                'name' => 'required|string',
+                'type' => 'required|string',
+                'firm' => 'required|string',
+                'price' => 'required|numeric',
+                'description' => 'required|string',
+                'availability' => 'string',
             ];
             }
         if($this->isMethod('put')){
             return [
-                'nome' => 'string',
-                'tipo' => 'string',
-                'marca' => 'string',
-                'preco' => 'string',
-                'descricao' => 'string',
-                'disponibilidade' => 'string',
+                'name' => 'string',
+                'type' => 'string',
+                'firm' => 'string',
+                'price' => 'string',
+                'description' => 'string',
+                'availability' => 'string',
             ];
             }
     }
@@ -44,13 +44,12 @@ class ProductRequest extends FormRequest
 
     public function messages() {
         return [
-            'nome.required' => "Campo Obrigatório!",
-            'tipo.required' => "Campo Obrigatório!",
-            'tipo.string' => "O campo deve ser preenchido com uma das categorias disponiveis",
-            'marca.required' => "Campo Obrigatório",
-            'preco.required' => "Campo Obrigatório!",
-            'descricao.required' => "Campo Obrigatório!",
-            'disponibilidade.required' => "Campo Obrigatório!"
+            'name.required' => "Campo Obrigatório!",
+            'type.required' => "Campo Obrigatório!",
+            'type.string' => "O campo deve ser preenchido com uma das categorias disponiveis",
+            'firm.required' => "Campo Obrigatório",
+            'price.required' => "Campo Obrigatório!",
+            'description.required' => "Campo Obrigatório!",
         ];
     }
 }
