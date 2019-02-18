@@ -20,7 +20,7 @@ class IsAdmin
                return $next($request);
         }
         else{
-          return response()->json(['Errou'],401);
+          return response()->json(['Error'],401);
         }
      }
 }

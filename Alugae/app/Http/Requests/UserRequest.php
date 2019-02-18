@@ -22,8 +22,10 @@ class UserRequest extends FormRequest
                 'email' => 'required|email',
                 'cpf' => 'required|cpf|formato_cpf',
                 'cep' => 'required|numeric',
-                'telefone' => 'string|telefone',
-                'complemento' => 'required|string',
+                'city' => 'required|string',
+                'number' => 'required|numeric',
+                'telephone' => 'string|telefone',
+                'complement' => 'required|string',
             ];
             }
         if($this->isMethod('put')){
@@ -32,8 +34,10 @@ class UserRequest extends FormRequest
                 'email' => 'email',
                 //'cpf' => 'unique:users,cpf,'.$this->users->id,
                 'cep' => 'numeric',
-                'telefone' => 'string|telefone',
-                'complemento' => 'string',
+                'city' => 'string',
+                'number' => 'numeric',
+                'telephone' => 'string|telephone',
+                'complement' => 'string',
                 ];
             }
     }
@@ -51,8 +55,8 @@ class UserRequest extends FormRequest
             'cpf.cpf' => "Insira um CPF válido",
             'cpf.formato_cpf' => "Insira o CPF na forma 111.222.333-44",
             'cep.required' => "Campo Obrigatório!",
-            'telefone.telefone' => "Digite o telefone na forma 9999-9999",
-            'complemento.required' => "Campo Obrigatório",
+            'telephone.telephone' => "Digite o telephone na forma 9999-9999",
+            'complement.required' => "Campo Obrigatório",
         ];
     }
 }

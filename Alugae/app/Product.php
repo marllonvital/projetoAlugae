@@ -12,7 +12,7 @@ class Product extends Model
     $this->description=$request->description;
     $this->price=$request->price;
     $this->name=$request->name;
-    $this->firm=$request->firm;
+    $this->brand=$request->brand;
     $this->type=$request->type;
 
     $this->save();
@@ -23,7 +23,7 @@ class Product extends Model
     $this->description=$request->description;
     $this->price=$request->price;
     $this->name=$request->name;
-    $this->firm=$request->firm;
+    $this->brand=$request->brand;
     $this->type=$request->type;
 
     $this->save();

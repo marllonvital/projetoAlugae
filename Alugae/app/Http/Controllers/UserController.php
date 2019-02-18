@@ -19,12 +19,14 @@ class UserController extends Controller
     {
       $novo_usuario= new User;
       $novo_usuario->insereUsuario($request);
+
       return response()->json(['Usuario Cadastrado!']);
     }
 
     public function show($id)
     {
       $novo_usuario = User::findOrFail($id);
+
       return response()->json([$novo_usuario]);
     }
 
@@ -32,6 +34,7 @@ class UserController extends Controller
     {
       $novo_usuario= User::findOrFail($id);
       $novo_usuario->atualizaUsuario($request);
+
       return response()->json([$novo_usuario]);
     }
 
@@ -67,6 +70,7 @@ class UserController extends Controller
     public function getProduct()
     {
         $user = Auth::user();
+        
         return response()->json([$user->product]);
 
     }
