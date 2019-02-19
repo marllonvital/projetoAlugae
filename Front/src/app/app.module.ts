@@ -1,10 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
-
-
 import { MaterializeModule } from 'angular2-materialize';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
+import { FormsModule} from '@angular/forms';
+
+// Service
+import { CadastroProdutoService} from './service/cadastro-produto.service';
+import { CadastroUsuarioService} from './service/cadastro-usuario.service';
+import { LoginService} from './service/login.service';
+
+
+// Component
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -13,7 +20,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProdutosComponent } from './components/produtos/produtos.component';
 import { SobreComponent } from './pages/sobre/sobre.component';
 import { CadastroUsuarioComponent } from './pages/cadastro-usuario/cadastro-usuario.component';
-import { LoginService } from './service/login.service';
 import { CadastroProdutoComponent } from './pages/cadastro-produto/cadastro-produto.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ProdutoComponent } from './pages/produto/produto.component';
@@ -46,10 +52,13 @@ import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categ
     AppRoutingModule,
     MaterializeModule,
     HttpClientModule,
+    FormsModule,
   ],
   providers: [
     HttpClientModule,
     LoginService,
+    CadastroProdutoService,
+    CadastroUsuarioService,
   ],
   bootstrap: [AppComponent]
 })
