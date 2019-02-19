@@ -2,15 +2,16 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Rent extends Model
 {
   public function insereAluguel($request){
-    
-    $this->quantity=$request->quantity;
-    $this->date_final=$request->date_final;
-    $this->date_initial=$request->date_initial;
+    $days = $request->days;
+    // $this->quantity=$request->quantity;
+    $this->date_initial= new Carbon()->format('D-M-Y');
+    $this->date_final = $this->date_initial->addDays($days)->format('D-M-Y');
     $this->product_id=$request->product_id;
     $this->user_id=$request->user_id;
 

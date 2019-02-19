@@ -2,12 +2,19 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Validator;
+
 
 class Product extends Model
 {
+  public function users(){
+      
+      return $this->belongsTo('App\User');
+    }
   public function insereProduto($request){
 
     $this->description=$request->description;
@@ -70,6 +77,10 @@ class Product extends Model
           $this->save();
       }
       return true;
+  }
+
+  public function priceRent(Request $request){
+        $current = new Carbon();
   }
 
 }

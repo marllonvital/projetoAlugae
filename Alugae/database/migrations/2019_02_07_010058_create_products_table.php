@@ -13,7 +13,7 @@ class CreateProductsTable extends Migration
             $table->string('type');
             $table->string('name');
             $table->string('brand');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->integer('price');
             $table->string('description');
             $table->string('availability')->nullable();

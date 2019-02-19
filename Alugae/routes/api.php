@@ -25,6 +25,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
     Route::post('get-details', 'API\PassportController@getDetails');
     Route::post('product-add', 'ProductController@store');
+    Route::get('get-product/{name}', 'ProductController@getProduct');
 
     Route::get('user/{id}', 'UserController@show');
     Route::put('user/reserveProduct/{product_id}', 'UserController@reserveProduct');
@@ -35,7 +36,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('product/listUsers/{id}', 'UserController@listUsers');
     Route::put('product/putInRent/{rent_id}', 'ProductController@putInProduct');
     Route::put('product/removeOfProduct/{product_id}', 'ProductController@removeOfProduct');
-    
+
     Route::apiResource('product', 'ProductController');
     Route::apiResource('user', 'UserController');
     Route::apiResource('rent', 'RentController');
