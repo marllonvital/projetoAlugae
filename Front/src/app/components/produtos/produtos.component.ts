@@ -10,7 +10,7 @@ import {MaterializeAction} from "angular2-materialize"
 export class ProdutosComponent implements OnInit {
 
   @ViewChild('carousel') carouselElement;
- actions = new EventEmitter<any>();
+ actions = new EventEmitter<string|MaterializeAction>();
 
   produto: any[]=[
     {nome: "Super Nintendo ",

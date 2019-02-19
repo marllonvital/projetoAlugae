@@ -33,7 +33,7 @@
         </div>
         <div class="col s12 m12 l12  card configuracao_perfil">
           <div class="card-content">
-            <a class="btn waves-effect waves-light botao_configuracao" href="/congiguracao_perfil" >Configuração</a>
+            <a class="btn waves-effect waves-light" (click)="abreModal()">Configuração</a>
           </div>
         </div>
       </div>
@@ -49,8 +49,11 @@
                   <div class="col s6">
                       <input type="text" id="comentario">
                   </div>
-                <div class="col s4">
+                <div class="col s4 hide-on-small-only">
                   <button class="waves-effect waves-light btn botao right-align" type="submit" name="comentario"> Postar</button>
+                </div>
+                <div class="col s2 hide-on-med-and-up">
+                  <button class="waves-effect waves-light btn botao right-align" type="submit" name="comentario"><i class="material-icons">send</i></button>
                 </div>
               </form>
             </div>
@@ -71,3 +74,19 @@
   </div>
 </div>
 </section>
+
+<div class="modal" materialize="modal" [materializeParams]="[{dismissable:true}]" [materializeActions]="modalActions">
+  <div class="modal-content row">
+    <i class="material-icons fechar" (click)="fechaModal()">close</i>
+    <h1 class="white-text">Configurações:</h1>
+    <form action="index.html" method="post">
+      <input type="text" name="telefone" placeholder="Trocar telefone:">
+      <input type="text" name="email" placeholder="Trocar e-mail:">
+      <input type="password" name="senha" placeholder="Trocar senha:">
+      <input type="password" name="senha_conf" placeholder="Confirmar nova senha:">
+      <input type="text" name="endereco" placeholder="Trocar endereço:">
+      <!-- LINHA PARA UPLOAD DE FOTO DE PERFIL -->
+    </form>
+    <button class="btn waves-effect waves-light" type="submit" name="button">Trocar dados cadastrais</button>
+  </div>
+</div>

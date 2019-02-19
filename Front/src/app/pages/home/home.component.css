@@ -1,6 +1,6 @@
 /* Elementos */
 h5{
-  margin-bottom: 40%;
+margin-bottom: 1%;
 }
 
 h3{
@@ -10,7 +10,9 @@ h3{
 /* Classes */
 
 .botao{
-  margin-left: 55%;
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
 }
 
 .frase_cover{
@@ -61,7 +63,14 @@ h3{
 }
 
 .card{
-  margin: 0 1.5vw 0 1.5vw
+  margin: 0 1.5vw 0 1.5vw;
+  text-align: left;
+  /* muitos problemas pra deiaxr o card com tamanho responsivo, dessa forma ele parece ficar bem em todas as telas */
+  height: 500px;
+}
+
+.card-content h3{
+  margin-top: 0;
 }
 
 .white-text{
@@ -74,16 +83,20 @@ div.card-title{
   width: 100%;
   height: 100%
 }
+
 .texto_mobile{
   position: absolute;
-  top: 35%;
-  left: 0%
+  bottom: 10%;
+  left: 0%;
+  margin: 0;
 }
 
 .veja_mais{
+  display: flex;
+  align-items: center;
   position: absolute;
-  top: 58%;
-  left: 73%;
+  bottom: 10%;
+  right: 5%;
   padding: 1vw;
 }
 
@@ -91,6 +104,15 @@ div.card-title{
 #momento_section{
   margin-left: 10vw;
 }
+
+#wrapper{
+  display: table;
+}
+
+#wrapper .card{
+  display: table-cell;
+}
+
 
 div.card-title.row a{
   margin: 1.78rem 0 1.424rem 0;
@@ -101,6 +123,12 @@ div.card-title.row a{
     margin-top: 5vh;
   }
 } */
+
+@media (max-width: 992px) {
+  .card{
+    height: auto;
+  }
+}
 @media only screen and (min-width: 892px) and (max-width: 1049px) {
   .cards-container{
     margin-top: 5vh;

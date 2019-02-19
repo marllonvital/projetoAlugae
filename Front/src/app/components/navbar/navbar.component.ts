@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  perfil_default:string = "../../../assets/img/perfil_provisorio/perfil_provisorio2.jpg";
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  logado(){
+    pass;
+  }
 }

@@ -140,6 +140,13 @@ div.container h1, div.container h2, div.container h3, div.container h4, div.cont
   padding: 0;
 }
 
+.modal-content{
+  background: #575E8B;
+  border-width: 1vw;
+  border-style: solid;
+  border-color: #95B2D0;
+}
+
 
 
 

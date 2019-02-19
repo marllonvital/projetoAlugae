@@ -23,8 +23,8 @@
   box-sizing: border-box;
   border-radius: 10px;
 }
-.comentario_text{
 
+.comentario_text{
   margin-left: 15%;
   margin-top: 5%;
 }
@@ -38,13 +38,10 @@
   text-align: center;
 }
 
-.botao_configuracao{
-  margin-left: 15%;
+.botao{
+  height:43px;
 }
 
-.botao{
-  margin-top:
-}
 .lista_desejos{
   background: #FFFFFF;
   border: 3px solid #95B2D0;
@@ -52,17 +49,40 @@
   margin-bottom: 0%;
   border-radius: 10px 10px 0px 0px;
   border-bottom: 0px;
-
 }
+
 .configuracao_perfil{
   background: #575E8B;
   border: 3px solid #95B2D0;
   box-sizing: border-box;
   border-radius: 0px 0px 10px 10px;
-  button-align: center;
+  display: flex;
+  justify-content: center;
   margin-top: 0%;
-
 }
+
+div.row.modal-content{
+  text-align: center;
+  margin-bottom: 0;
+}
+
+div.modal{
+  overflow: visible;
+}
+
+i.material-icons.fechar{
+ position: absolute;
+ font-size: 2rem;
+ top: 1vw;
+ right: 1vw;
+ background: #1CB3C8;
+ color: #ffffff;
+ cursor: pointer;
+}
+div.modal input[type]:not(.browser-default){
+  margin-bottom: 2vh;
+}
+
 
 /* id */
 #img-circle {
@@ -80,13 +100,14 @@
   margin-left: 2%;
   margin-top: 2%;
   }
-  #img-circle_comentarios_usuario {
-    position: absolute;
-    width: 10%;
-    border-radius: 50%;
-    margin-left: 2%;
-    margin-top: 2%;
-    }
+
+#img-circle_comentarios_usuario {
+  position: absolute;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+  }
 
 #usuario_name{
   position: absolute;
@@ -185,4 +206,12 @@
     max-width: 100%;
     width: 90%;
   }
+
+  #img-circle_comentarios_usuario {
+    position: absolute;
+    width: 10%;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-top: 8%;
+    }
 }

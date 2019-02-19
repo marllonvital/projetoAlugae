@@ -32,6 +32,7 @@ nav{
 }
 
 
+
 /* __________________________________________________________________________________________________________________________ */
 
 /* CONFIGURAÇÕES LOGO */
@@ -45,7 +46,7 @@ nav{
   position: absolute;
   left: auto;
   right: 78.58%;
-  top: 13.73%;
+  top: 8%;
   bottom: auto;
 }
 
@@ -79,12 +80,17 @@ nav{
   background-color: white;
   border-radius: 5px;
   margin-bottom: 0;
+  position: relative;
+  top: 3.5vh;
 }
 
 
 input::placeholder{
   padding-left: 1vw;
   color: rgba(28, 179, 200, 0.5);
+}
+input#search_ally{
+  margin-top: 0;
 }
 
 
@@ -104,6 +110,9 @@ input::placeholder{
 /* __________________________________________________________________________________________________________________________ */
 
 /* CONFIGURAÇÕES DE BOTÕES, LABELS E LINKS */
+ .cadastrar{
+   height: 2.5vh;
+ }
 
 nav .sidenav-trigger i{
   margin-left: 4vw;
@@ -114,7 +123,7 @@ nav .sidenav-trigger i{
 }
 
 
-.main_nav a.btn{
+.main_nav button.btn{
   font-family: Roboto, sans-serif;
   margin-top: 2vh;
   height: 7vh;
@@ -132,7 +141,6 @@ nav .sidenav-trigger i{
 
 .ally_nav label, .ally_nav img{
   height: 2.71vh;
-  /* line-height: 9.65vh; */
   color: #1CB3C8 !important;
   right: 0rem;
   left: auto;
@@ -141,7 +149,40 @@ nav .sidenav-trigger i{
 #lupa{
   position: relative;
   left: -4vw;
-  bottom: -4vh;
+  top: 4vh;
+}
+
+nav i.material-icons.favorite_icon{
+  display: inline-block;
+  width: 1em;
+  padding: 0;
+  line-height: 1em;
+  height: 1em;
+}
+
+#favorite_link, #user_login{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 7.5%;
+  top: 0.5vh;
+}
+
+#cadastrar_link, #user_cadastro{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 1%;
+  top: 0%;
+  font-weight: 400;
+}
+
+.img-circle {
+  position: absolute;
+  width: 7vh;
+  border-radius: 50%;
+  right: 2%;
+  top: 2vh;
 }
 
 
@@ -206,11 +247,6 @@ nav .sidenav-trigger i{
   font-weight: 100;
 }
 
-@media (min-width: 893px) and (max-width: 1200px){
-  .logo_size{
-    height: 7vh;
-  }
-}
 /* __________________________________________________________________________________________________________________________ */
 
   /* CONFIGURAÇÕES SIDENAV */
@@ -226,4 +262,18 @@ nav .sidenav-trigger i{
 
   .color{
     color: white;
+  }
+
+
+  @media (min-width: 893px) and (max-width: 1200px){
+    .logo_size{
+      height: 7vh;
+    }
+    .alugae_icon{
+      position: absolute;
+      left: auto;
+      right: 78.58%;
+      top: 18%;
+      bottom: auto;
+    }
   }

@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser'
+
+
 
 @Component({
   selector: 'app-home',
@@ -11,9 +14,15 @@ export class HomeComponent implements OnInit {
      preco: 100,
      ul: "assets/img/produto_defaut/defaut.png"}
   ];
+  // card_cozinha = document.getElementById("cardCozinha");
+  // card_livros = document.getElementById("cardLivros");
+  // card_eletronicos = document.getElementById("cardEletronicos");
+
   constructor() { }
 
   ngOnInit() {
+    // this.card_eletronicos.style.height=this.card_cozinha.style.height;
+    // this.card_livros.style.height=this.card_cozinha.style.height;
   }
 
 }
