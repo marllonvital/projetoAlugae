@@ -27,10 +27,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function Products(){
+      
+      return $this->hasMany('App\Product');
+    }
+
     public function insereUsuario($request){
       $this->name=$request->name;
       $this->cpf=$request->cpf;
       $this->password=bcrypt($request->password);
+      $this->c_password=bcrypt($request->password);
       $this->email=$request->email;
       $this->city=$request->city;
       $this->telephone=$request->telephone;

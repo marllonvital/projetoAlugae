@@ -59,8 +59,13 @@ class UserRequest extends FormRequest
             'cep.required' => "Campo Obrigatório!",
             'telephone.telefone' => "Digite o telephone na forma 9999-9999",
             'complement.required' => "Campo Obrigatório",
+<<<<<<< HEAD
             'password.digits'=>"As senha deve conter exatamente 8 cararacteres",
             'c_password.same' =>"As senhas devem ser iguais",
+=======
+            'password.digits' => "A senha deve conter exatamente 8 caracteres",
+            'c_password.same' => "As senhas devem ser iguais",
+>>>>>>> origin/merges
         ];
     }
 }
