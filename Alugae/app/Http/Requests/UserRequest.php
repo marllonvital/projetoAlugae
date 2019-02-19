@@ -24,6 +24,8 @@ class UserRequest extends FormRequest
                 'cep' => 'required|numeric',
                 'city' => 'required|string',
                 'number' => 'required|numeric',
+                'password'=>'required|digits:8',
+                'c_password'=>'required|same:password',
                 'telephone' => 'string|telefone',
                 'complement' => 'required|string',
             ];
@@ -57,6 +59,8 @@ class UserRequest extends FormRequest
             'cep.required' => "Campo Obrigatório!",
             'telephone.telefone' => "Digite o telephone na forma 9999-9999",
             'complement.required' => "Campo Obrigatório",
+            'password.digits'=>"As senha deve conter exatamente 8 cararacteres",
+            'c_password.same' =>"As senhas devem ser iguais",
         ];
     }
 }

@@ -7,6 +7,7 @@ import { FormsModule} from '@angular/forms';
 
 // Service
 import { CadastroProdutoService} from './service/cadastro-produto.service';
+import { CadastroUsuarioService} from './service/cadastro-usuario.service';
 import { LoginService} from './service/login.service';
 
 
@@ -57,6 +58,7 @@ import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categ
     HttpClientModule,
     LoginService,
     CadastroProdutoService,
+    CadastroUsuarioService,
   ],
   bootstrap: [AppComponent]
 })

@@ -38,16 +38,16 @@ class User extends Authenticatable
       $this->complement=$request->complement;
       $this->cep=$request->cep;
 
-      if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
-            Storage::makeDirectory('localPhotos/',0775,true);
-
-      $validator = Validator::make($request->all(), [
-        'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
-      ]);
-
-      $file = $request->file('photo');
-      $path = $file->store('localPhotos');
-      $this->photo = $file;
+      // if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
+      //       Storage::makeDirectory('localPhotos/',0775,true);
+      //
+      // $validator = Validator::make($request->all(), [
+      //   'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+      // ]);
+      //
+      // $file = $request->file('photo');
+      // $path = $file->store('localPhotos');
+      // $this->photo = $file;
       $this->save();
     }
     public function atualizaUsuario($request){
