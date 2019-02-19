@@ -5,6 +5,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ProductRequest;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Product;
 
@@ -18,9 +19,11 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
+      $user = Auth::user();
       $newProduct= new Product;
-      $newProduct->insereProduto($request);
+      $newProduct->insereProduto($request, $user);
       return response()->json([$newProduct]);
+
     }
 
     public function show($id)
@@ -50,12 +53,19 @@ class ProductController extends Controller
     public function getUsers($id)
   {
       $product = Product::findOrFail($id);
+      
       return response()->json([$product->users]);
   }
 
   public function getProduct($name){
 
     $products = Product::where('name', $name)->get();
+    return response()->json([$products]);
+  }
+
+  public function getProductById($id){
+
+    $products = Product::where('id', $id)->get();
     return response()->json([$products]);
   }
 }

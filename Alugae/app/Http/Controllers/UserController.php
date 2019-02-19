@@ -4,9 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\ConfirmationRegister;
-use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\UserRequest;
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 use App\User;
 
 class UserController extends Controller
@@ -18,12 +16,7 @@ class UserController extends Controller
 
     public function store(UserRequest $request)
     {
-      $newUser = new User;
-
-      $newUser->insereUsuario($request);
-      $newUser->notify(new ConfirmationRegister($newUser));
-
-      return response()->json(['Usuario Cadastrado!']);
+      //
     }
 
     public function show($id)
@@ -49,10 +42,12 @@ class UserController extends Controller
 
     //Funções de usuário autenticado
 
-    public function reserveProduct($product_id)
+    public function reserveProduct($product_id, $date)
     {
+        $days = $date;
+        $date_initial = new Carbon();
+        $date_final = $date_initial
         $user = Auth::user();
-
         $user->reserveProduct($product_id);
         return response()->json(['Reservado']);
 
@@ -73,14 +68,5 @@ class UserController extends Controller
         $user = Auth::user();
         
         return response()->json([$user->product]);
-
-    }
-
-    public function getInfo()
-    {
-        $user = Auth::user();
-
-        return response()->json(['success' => $user], 200); //retorna as informações do usuário logado
-
     }
 }

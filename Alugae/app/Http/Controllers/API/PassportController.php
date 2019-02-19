@@ -1,13 +1,14 @@
 <?php
 namespace App\Http\Controllers\API;
 
-use Illuminate\Support\Facades\Validator;
-use App\Http\Requests\UserRequest;
+use DB;
 use Auth;
 use App\User;
-use DB;
 use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Validator;
+use App\Notifications\ConfirmationRegister;
 
 class PassportController extends Controller
 {
@@ -27,6 +28,7 @@ class PassportController extends Controller
     public function register(UserRequest $request) {
         $newUser = new User;
         $newUser->insereUsuario($request);
+        $newUser->notify(new ConfirmationRegister($newUser));
       
       $success['token'] = $newUser->createToken('MyApp')->accessToken;
       return response()->json(['success'=>$success],$this->successStatus);

@@ -3,8 +3,10 @@
 namespace App;
 
 use App\Product;
+use Carbon\Carbon;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Support\Facades\Storage;
+use App\Notifications\ConfirmationRent;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -28,9 +30,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function Products(){
+    public function products(){
       
-      return $this->hasMany('App\Product');
+      return $this->belongsToMany('App\Product')->using('App\Rent');
     }
 
     public function insereUsuario($request){
@@ -72,14 +74,14 @@ class User extends Authenticatable
     }
 
     public function product(){
-        return $this->belongsTo('App\product');
+        return $this->hasMany('App\product');
     }
 
-    //reserva o quarto ou falha
-    public function reserveproduct($product_id){
+    //reserva o produto ou falha
+    public function reserveProduct($product_id){
         $product = product::findOrFail($product_id);
-
-        $product->newUsers([$this->id]);
+        $this->products->attach([$this->id]);
+        $this->notify(new ConfirmationRent($newRent));
 
         return true;
     }
@@ -92,6 +94,10 @@ class User extends Authenticatable
         return true;
     }
 
+    public function getUser($id) {
+      $user = findOrFail($id);
+      return response()->json($user);
+    }
 
 
 }
