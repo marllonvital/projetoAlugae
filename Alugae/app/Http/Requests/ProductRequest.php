@@ -52,4 +52,10 @@ class ProductRequest extends FormRequest
             'description.required' => "Campo Obrigatório!",
         ];
     }
+
+    public function getProduct($name){
+
+    $products = Product::where('name', $name)->get();
+    return response()->json([$products]);
+  }
 }

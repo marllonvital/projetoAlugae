@@ -9,6 +9,7 @@ import { FormsModule} from '@angular/forms';
 import { CadastroProdutoService} from './service/cadastro-produto.service';
 import { CadastroUsuarioService} from './service/cadastro-usuario.service';
 import { LoginService} from './service/login.service';
+import {PesquisaProdutoService} from './service/pesquisa-produto.service';
 
 
 // Component
@@ -26,9 +27,10 @@ import { ProdutoComponent } from './pages/produto/produto.component';
 import { CategoriaCozinhaComponent } from './pages/categoria-cozinha/categoria-cozinha.component';
 import { CategoriaLivroComponent } from './pages/categoria-livro/categoria-livro.component';
 import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categoria-eletronico.component';
-
+import { PesquisaProdutoComponent } from './pages/pesquisa-produto/pesquisa-produto.component';
 //Guardas
 import { AuthGuard } from './guards/auth.guard';
+
 
 
 
@@ -50,6 +52,7 @@ import { AuthGuard } from './guards/auth.guard';
     CategoriaCozinhaComponent,
     CategoriaLivroComponent,
     CategoriaEletronicoComponent,
+    PesquisaProdutoComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { AuthGuard } from './guards/auth.guard';
     LoginService,
     CadastroProdutoService,
     CadastroUsuarioService,
+    PesquisaProdutoService,
     AuthGuard,
   ],
   bootstrap: [AppComponent]

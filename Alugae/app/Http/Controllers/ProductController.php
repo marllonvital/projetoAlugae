@@ -52,4 +52,10 @@ class ProductController extends Controller
       $product = Product::findOrFail($id);
       return response()->json([$product->users]);
   }
+
+  public function getProduct($name){
+
+    $products = Product::where('name', $name)->get();
+    return response()->json([$products]);
+  }
 }

@@ -22,13 +22,13 @@ export class CadastroProdutoComponent implements OnInit {
     this.cadastroProdutoService.addProduto(produto).subscribe(
       res => {
         console.log(res);
-        this.produtos.push({
-          name:produto.nome_produto,
-          description:produto.descricao_produto,
-          price:produto.preco_diaria,
-          type:produto.tipo,
-          brand:produto.produto_marca,
-          photo:produto.imagem_submit
+            this.produtos.push({
+              name:produto.nome_produto,
+              description:produto.descricao_produto,
+              price:produto.preco_diaria,
+              type:produto.tipo,
+              brand:produto.produto_marca,
+              photo:produto.imagem_submit
         })
       }
     )

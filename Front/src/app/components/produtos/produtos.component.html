@@ -4,14 +4,14 @@
 
 
 
-  <div #carousel class="carousel" [ngClass]="{ 'initialized': showInitialized }" materialize="carousel" [materializeActions]="actions" [materializeParams]="[{dist:0, padding:30}]">
+  <div #carousel class="carousel" [ngClass]="{ 'initialized': showInitialized }" materialize="carousel" [materializeActions]="actions" [materializeParams]="[{dist:0, padding:30}]" *ngIf="produto">
     <a *ngFor="let url of imageURLs" class="carousel-item">
      <div class="card">
        <div class="card-image">
          <img [src] = "url">
          <div class="card-content">
-           <h5> {{produto[0].nome}}</h5>
-           <h6>{{produto[0].preco}}</h6>
+           <h5> {{produto[0].nome_produto}}</h5>
+           <h6>{{produto[0].preco_diaria}}</h6>
          </div>
        </div>
      </div>
