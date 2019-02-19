@@ -12,12 +12,15 @@ import { CategoriaCozinhaComponent } from './pages/categoria-cozinha/categoria-c
 import { CategoriaLivroComponent } from './pages/categoria-livro/categoria-livro.component';
 import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categoria-eletronico.component';
 import {PerfilComponent} from './pages/perfil/perfil.component';
+
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
 
     {path: 'home', component: HomeComponent},
     {path: 'sobre', component: SobreComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'perfil', component: PerfilComponent},
+    {path: 'perfil', component: PerfilComponent, CanActivate: [AuthGuard]} ,
     {path:'produto',component: ProdutoComponent},
     {path:'categoria-cozinha',component: CategoriaCozinhaComponent},
     {path:'categoria-livro',component: CategoriaLivroComponent},

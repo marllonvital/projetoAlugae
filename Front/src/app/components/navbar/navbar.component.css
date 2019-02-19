@@ -165,7 +165,12 @@ nav i.material-icons.favorite_icon{
   display: flex;
   align-items: center;
   right: 7.5%;
-  top: 0.5vh;
+  top: 20%;
+}
+
+
+div.perfil_logado, div.perfil_deslogado{
+    height: 11vh;
 }
 
 #cadastrar_link, #user_cadastro{

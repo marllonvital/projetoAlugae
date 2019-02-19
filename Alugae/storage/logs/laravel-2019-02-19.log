@@ -51,3 +51,171 @@
 #48 /home/fabio/projetoAlugae/Alugae/server.php(21): require_once('/home/fabio/pro...')
 #49 {main}
 "} 
+[2019-02-19 14:11:56] local.ERROR: Key path "file://C:\Users\Gabriel Conde\Desktop\projetoAlugae\Alugae\storage\oauth-private.key" does not exist or is not readable {"exception":"[object] (LogicException(code: 0): Key path \"file://C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\storage\\oauth-private.key\" does not exist or is not readable at C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\league\\oauth2-server\\src\\CryptKey.php:48)
+[stacktrace]
+#0 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(242): League\\OAuth2\\Server\\CryptKey->__construct('file://C:\\\\Users...', NULL, false)
+#1 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(208): Laravel\\Passport\\PassportServiceProvider->makeCryptKey('private')
+#2 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(98): Laravel\\Passport\\PassportServiceProvider->makeAuthorizationServer()
+#3 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(776): Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#4 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(658): Illuminate\\Container\\Container->build(Object(Closure))
+#5 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(609): Illuminate\\Container\\Container->resolve('League\\\\OAuth2\\\\S...', Array)
+#6 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(759): Illuminate\\Container\\Container->make('League\\\\OAuth2\\\\S...', Array)
+#7 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(912): Illuminate\\Foundation\\Application->make('League\\\\OAuth2\\\\S...')
+#8 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(840): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#9 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(807): Illuminate\\Container\\Container->resolveDependencies(Array)
+#10 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(658): Illuminate\\Container\\Container->build('Laravel\\\\Passpor...')
+#11 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(609): Illuminate\\Container\\Container->resolve('Laravel\\\\Passpor...', Array)
+#12 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(759): Illuminate\\Container\\Container->make('Laravel\\\\Passpor...', Array)
+#13 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\HasApiTokens.php(66): Illuminate\\Foundation\\Application->make('Laravel\\\\Passpor...')
+#14 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Controllers\\API\\PassportController.php(31): App\\User->createToken('MyApp')
+#15 [internal function]: App\\Http\\Controllers\\API\\PassportController->register(Object(App\\Http\\Requests\\UserRequest))
+#16 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#17 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('register', Array)
+#18 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\API\\PassportController), 'register')
+#19 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#20 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Routing\\Route->run()
+#21 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Middleware\\CORS.php(12): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#30 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(684): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Middleware\\CORS.php(12): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\server.php(21): require_once('C:\\\\Users\\\\Gabrie...')
+#61 {main}
+"} 
+[2019-02-19 14:12:58] local.ERROR: Key path "file://C:\Users\Gabriel Conde\Desktop\projetoAlugae\Alugae\storage\oauth-private.key" does not exist or is not readable {"exception":"[object] (LogicException(code: 0): Key path \"file://C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\storage\\oauth-private.key\" does not exist or is not readable at C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\league\\oauth2-server\\src\\CryptKey.php:48)
+[stacktrace]
+#0 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(242): League\\OAuth2\\Server\\CryptKey->__construct('file://C:\\\\Users...', NULL, false)
+#1 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(208): Laravel\\Passport\\PassportServiceProvider->makeCryptKey('private')
+#2 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\PassportServiceProvider.php(98): Laravel\\Passport\\PassportServiceProvider->makeAuthorizationServer()
+#3 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(776): Laravel\\Passport\\PassportServiceProvider->Laravel\\Passport\\{closure}(Object(Illuminate\\Foundation\\Application), Array)
+#4 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(658): Illuminate\\Container\\Container->build(Object(Closure))
+#5 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(609): Illuminate\\Container\\Container->resolve('League\\\\OAuth2\\\\S...', Array)
+#6 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(759): Illuminate\\Container\\Container->make('League\\\\OAuth2\\\\S...', Array)
+#7 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(912): Illuminate\\Foundation\\Application->make('League\\\\OAuth2\\\\S...')
+#8 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(840): Illuminate\\Container\\Container->resolveClass(Object(ReflectionParameter))
+#9 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(807): Illuminate\\Container\\Container->resolveDependencies(Array)
+#10 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(658): Illuminate\\Container\\Container->build('Laravel\\\\Passpor...')
+#11 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(609): Illuminate\\Container\\Container->resolve('Laravel\\\\Passpor...', Array)
+#12 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(759): Illuminate\\Container\\Container->make('Laravel\\\\Passpor...', Array)
+#13 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\passport\\src\\HasApiTokens.php(66): Illuminate\\Foundation\\Application->make('Laravel\\\\Passpor...')
+#14 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Controllers\\API\\PassportController.php(31): App\\User->createToken('MyApp')
+#15 [internal function]: App\\Http\\Controllers\\API\\PassportController->register(Object(App\\Http\\Requests\\UserRequest))
+#16 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): call_user_func_array(Array, Array)
+#17 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('register', Array)
+#18 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(219): Illuminate\\Routing\\ControllerDispatcher->dispatch(Object(Illuminate\\Routing\\Route), Object(App\\Http\\Controllers\\API\\PassportController), 'register')
+#19 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php(176): Illuminate\\Routing\\Route->runController()
+#20 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(682): Illuminate\\Routing\\Route->run()
+#21 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Routing\\Router->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#22 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Middleware\\CORS.php(12): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#23 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#24 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#25 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php(41): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#26 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\SubstituteBindings->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#27 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#28 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\ThrottleRequests.php(58): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#29 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Routing\\Middleware\\ThrottleRequests->handle(Object(Illuminate\\Http\\Request), Object(Closure), 60, '1')
+#30 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#31 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#32 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(684): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#33 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(659): Illuminate\\Routing\\Router->runRouteWithinStack(Object(Illuminate\\Routing\\Route), Object(Illuminate\\Http\\Request))
+#34 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(625): Illuminate\\Routing\\Router->runRoute(Object(Illuminate\\Http\\Request), Object(Illuminate\\Routing\\Route))
+#35 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(614): Illuminate\\Routing\\Router->dispatchToRoute(Object(Illuminate\\Http\\Request))
+#36 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(176): Illuminate\\Routing\\Router->dispatch(Object(Illuminate\\Http\\Request))
+#37 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(30): Illuminate\\Foundation\\Http\\Kernel->Illuminate\\Foundation\\Http\\{closure}(Object(Illuminate\\Http\\Request))
+#38 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\app\\Http\\Middleware\\CORS.php(12): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#39 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): App\\Http\\Middleware\\CORS->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#40 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#41 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#42 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#43 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#44 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#45 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#46 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#47 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php(31): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#48 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#49 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#50 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php(27): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#51 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#52 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#53 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode.php(62): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#54 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Illuminate\\Foundation\\Http\\Middleware\\CheckForMaintenanceMode->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#55 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#56 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#57 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#58 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#59 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#60 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\server.php(21): require_once('C:\\\\Users\\\\Gabrie...')
+#61 {main}
+"} 
+[2019-02-19 14:14:10] local.ERROR: Command "passport" is not defined.
+
+Did you mean one of these?
+    passport:client
+    passport:install
+    passport:keys {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"passport\" is not defined.
+
+Did you mean one of these?
+    passport:client
+    passport:install
+    passport:keys at C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('passport')
+#1 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2019-02-19 14:15:20] local.ERROR: Command "passport" is not defined.
+
+Did you mean one of these?
+    passport:client
+    passport:install
+    passport:keys {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"passport\" is not defined.
+
+Did you mean one of these?
+    passport:client
+    passport:install
+    passport:keys at C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php:632)
+[stacktrace]
+#0 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php(226): Symfony\\Component\\Console\\Application->find('passport')
+#1 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\symfony\\console\\Application.php(145): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(89): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(122): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\Gabriel Conde\\Desktop\\projetoAlugae\\Alugae\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 

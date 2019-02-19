@@ -14,7 +14,10 @@ export class LoginService {
 
   constructor ( private http: HttpClient ) { }
 
-	getLogin(): Observable<any> {
-		return this.http.get( this.apiUrl ).pipe( map( res=>res ) );
+	postLogin(usuario:any): Observable<any> {
+    return this.http.post(this.apiUrl,{
+      email:usuario.email_usuario,
+      password:usuario.senha_usuario,
+    }).pipe(map(res => res));
   }
 }

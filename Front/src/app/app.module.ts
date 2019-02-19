@@ -27,6 +27,10 @@ import { CategoriaCozinhaComponent } from './pages/categoria-cozinha/categoria-c
 import { CategoriaLivroComponent } from './pages/categoria-livro/categoria-livro.component';
 import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categoria-eletronico.component';
 
+//Guardas
+import { AuthGuard } from './guards/auth.guard';
+
+
 
 
 
@@ -59,6 +63,7 @@ import { CategoriaEletronicoComponent } from './pages/categoria-eletronico/categ
     LoginService,
     CadastroProdutoService,
     CadastroUsuarioService,
+    AuthGuard,
   ],
   bootstrap: [AppComponent]
 })
