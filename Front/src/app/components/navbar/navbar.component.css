@@ -110,9 +110,6 @@ input#search_ally{
 /* __________________________________________________________________________________________________________________________ */
 
 /* CONFIGURAÇÕES DE BOTÕES, LABELS E LINKS */
- .cadastrar{
-   height: 2.5vh;
- }
 
 nav .sidenav-trigger i{
   margin-left: 4vw;
@@ -166,11 +163,6 @@ nav i.material-icons.favorite_icon{
   align-items: center;
   right: 7.5%;
   top: 20%;
-}
-
-
-div.perfil_logado, div.perfil_deslogado{
-    height: 11vh;
 }
 
 #cadastrar_link, #user_cadastro{

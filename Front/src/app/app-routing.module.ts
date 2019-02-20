@@ -20,14 +20,14 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'sobre', component: SobreComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'perfil', component: PerfilComponent, CanActivate: [AuthGuard]} ,
+    {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]} ,
     {path:'produto',component: ProdutoComponent},
     {path:'categoria-cozinha',component: CategoriaCozinhaComponent},
     {path:'categoria-livro',component: CategoriaLivroComponent},
     {path:'categoria-eletronico',component: CategoriaEletronicoComponent},
     {path:'cadastro-usuario',component: CadastroUsuarioComponent},
     {path:'cadastro-produto',component: CadastroProdutoComponent},
-    {path: '',redirectTo: '/home',pathMatch: 'full'}
+    {path: '', redirectTo: '/home',pathMatch: 'full'}
 ];
 
 @NgModule({

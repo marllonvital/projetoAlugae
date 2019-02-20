@@ -10,6 +10,7 @@ import { EventEmitter } from "@angular/core"
 export class PerfilComponent implements OnInit {
 
   modalActions = new EventEmitter<string|MaterializeAction>();
+  nome_usuario = localStorage.getItem('nome');
 
   constructor() { }
 

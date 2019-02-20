@@ -9,6 +9,7 @@ import { FormsModule} from '@angular/forms';
 import { CadastroProdutoService} from './service/cadastro-produto.service';
 import { CadastroUsuarioService} from './service/cadastro-usuario.service';
 import { LoginService} from './service/login.service';
+import { AuthService } from './service/auth.service';
 
 
 // Component
@@ -63,6 +64,7 @@ import { AuthGuard } from './guards/auth.guard';
     LoginService,
     CadastroProdutoService,
     CadastroUsuarioService,
+    AuthService,
     AuthGuard,
   ],
   bootstrap: [AppComponent]
