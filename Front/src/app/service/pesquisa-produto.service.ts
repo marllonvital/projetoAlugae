@@ -17,6 +17,6 @@ export class PesquisaProdutoService {
 
   getProduto(nomeInput: string): Observable<any>{
     console.log(nomeInput);
-    return this.http.get(this.apiUrl+nomeInput).pipe(map(res => res));
+    return this.http.get(this.apiUrl + nomeInput).pipe(map(res => res));
   }
 }

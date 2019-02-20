@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router} from '@angular/router';
 import {PesquisaProdutoService } from '../../service/pesquisa-produto.service';
 @Component({
   selector: 'app-navbar',
@@ -13,23 +13,17 @@ export class NavbarComponent implements OnInit {
   error: boolean = false;
   perfil_default:string = "../../../assets/img/perfil_provisorio/perfil_provisorio2.jpg";
 
-  constructor( public pesguisaProdutoService: PesquisaProdutoService) { }
+  constructor( private pesquisaProdutoService: PesquisaProdutoService,
+     private route: ActivatedRoute,
+     private router: Router) { }
 
   ngOnInit() {
+
   }
 
-  onSubmit(){
-    this.error=false;
+  changePage(){
     console.log(this.nomeInput);
-    this.pesguisaProdutoService.getProduto(this.nomeInput).subscribe(
-      res=>{
-        console.log(res);
-        this.produto = res;
-      },
-      error =>{
-        this.error = true;
-      }
-    );
+    this.router.navigate(['pesquisa-produto'],{queryParams: {name: this.nomeInput}});
   }
 
   logado(){
