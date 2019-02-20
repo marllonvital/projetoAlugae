@@ -7,13 +7,13 @@
           <h3 id = "chamada_login">Comece a Alugar!</h3>
           <div class="row">
             <div class="input-field col s12">
-              <input type="email" class="validate" id="email" name="email_usuario" ngModel>
+              <input type="email" class="validate" id="email" name="email_usuario" #email_usuario="ngModel" required ngModel>
               <label class="active" for="email" data-error="E-mail no formato errado" data-success="">Email</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input type="password" class="validate" id="senha" name="senha_usuario" ngModel>
+              <input type="password" class="validate" id="senha" name="senha_usuario" #senha_usuario="ngModel" required ngModel>
               <label class="active" for="password">Senha</label>
             </div>
           </div>
@@ -22,7 +22,7 @@
               <a class="btn waves-effect waves-light botao_cadastrar" href="/cadastro-usuario" >Criar Conta</a>
             </div>
             <div class="col s6">
-              <button class=" col s6 btn waves-effect waves-light" type="submit" name="action" href = "/home">Entrar</button>
+              <button class=" col s6 btn waves-effect waves-light" type="submit" name="action" [disabled]="senha_usuario.invalid || email_usuario.invalid" (click)="navigateToHome()">Entrar</button>
             </div>
           </div>
         </div>

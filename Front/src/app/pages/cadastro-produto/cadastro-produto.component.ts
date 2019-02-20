@@ -11,6 +11,7 @@ import {CadastroProdutoService} from '../../service/cadastro-produto.service';
 export class CadastroProdutoComponent implements OnInit {
 
   produtos: any[] = [];
+  counter:number = 0;
 
   constructor(private cadastroProdutoService:CadastroProdutoService) { }
 
@@ -28,9 +29,13 @@ export class CadastroProdutoComponent implements OnInit {
               price:produto.preco_diaria,
               type:produto.tipo,
               brand:produto.produto_marca,
-              photo:produto.imagem_submit
-        })
-      }
-    )
+              photo:produto.imagem_submit,
+        });
+        localStorage.setItem('nome_produto_' +counter.toString(), res.success.name);
+        localStorage.setItem('preco_produto_' +counter.toString(), res.success.preco);
+        this.counter++;
+      },
+    );
   }
+
 }

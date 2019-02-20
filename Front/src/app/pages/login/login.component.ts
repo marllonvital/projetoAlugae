@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../../service/login.service';
 import { AuthService } from '../../service/auth.service';
+import { Router } from '@angular/router';
 
 
 
@@ -14,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   usuario_login:any[]=[];
 
-  constructor(private loginService:LoginService, private authService:AuthService) { }
+  constructor(private loginService:LoginService, private authService:AuthService, private router:Router) { }
 
   ngOnInit() {
   }
@@ -41,4 +42,9 @@ export class LoginComponent implements OnInit {
       }
     )
   }
+
+  navigateToHome(){
+    this.router.navigate(['home']);
+  }
+
 }

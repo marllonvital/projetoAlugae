@@ -16,18 +16,11 @@ export class AuthGuard implements CanActivate  {
   canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean{
     console.log('guarda ativado');
     //this.isAuthentic(); apanhei demais durante horas pra função assíncrona e to sem tempo pra fazer bonitinho
-    return this.isLoged();
+    return this.authService.isLoged();
 
   }
 
-  isLoged(){
-    let token = localStorage.getItem('token');
-    if (token != null){
-      return true;
-    } else{
-      return false;
-    }
-  }
+
 
   // isAuthentic(): Observable<boolean>{
   //   let token = localStorage.getItem('token');

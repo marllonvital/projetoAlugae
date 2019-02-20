@@ -18,4 +18,14 @@ export class AuthService {
     console.log(headers);
     return this.http.get(this.apiUrl, {headers}).pipe(map(res => res));
   }
+
+  isLoged(){
+    let token = localStorage.getItem('token');
+    if (token != null){
+      return true;
+    } else{
+      return false;
+    }
+  }
+  
 }

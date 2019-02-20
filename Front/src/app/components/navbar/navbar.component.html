@@ -10,7 +10,7 @@
     <div class="row col l12">
       <form #nome="ngForm" (ngSubmit)="onSubmit()">
         <div class="input-field col offset-l3 l6 hide-on-med-and-down">
-          <input id="search" type="search" placeholder="Procure um produto para alugar:" ngModel="pesquisa">
+          <input id="search" type="search" name="name_produto" placeholder="Procure um produto para alugar:" ngModel="pesquisa">
         </div>
         <button class="btn waves-light col l1 hide-on-med-and-down valign-wrapper" type="submit" name="busca">Busca</button>
       </form>
@@ -53,7 +53,7 @@
 
       <form class="hide-on-large-only" #nome="ngForm" (ngSubmit)="onSubmit()">
         <div class="input-field col offset-m2 m8 offset-s2 s8">
-          <input id="search_ally" type="search" placeholder="Busca" required [(ngModel)]="nomeInput">
+          <input id="search_ally" name="name_produto" type="search" placeholder="Busca" required [(ngModel)]="nomeInput">
         </div>
         <img class="col m1 s1" id="lupa" src="../../assets/img/icones/lupa.svg" (click)="null" alt="">
       </form>

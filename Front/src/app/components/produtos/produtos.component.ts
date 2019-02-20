@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { EventEmitter, ViewChild} from "@angular/core"
 import {MaterializeAction} from "angular2-materialize"
 
@@ -10,13 +10,12 @@ import {MaterializeAction} from "angular2-materialize"
 export class ProdutosComponent implements OnInit {
 
   @ViewChild('carousel') carouselElement;
- actions = new EventEmitter<string|MaterializeAction>();
 
-  produto: any[]=[
-    {nome: "Super Nintendo ",
-     preco: 100,
-     ul: "assets/img/produto_defaut/defaut.png"}
-  ];
+  actions = new EventEmitter<string|MaterializeAction>();
+
+  produto:any[] = [];
+  preco:any[] = [];
+
 
   imageURLs = [
   "https://image.shutterstock.com/display_pic_with_logo/1264645/364153082/stock-photo-asian-girl-in-sunflower-field-364153082.jpg",
@@ -29,21 +28,27 @@ export class ProdutosComponent implements OnInit {
   "https://picsum.photos/1000/?random",
   "https://picsum.photos/1000/?random",
 
-];
+  ];
 
-   showInitialized = false;
+  showInitialized = false;
 
   constructor() {
-  // example of a hacky way to add an image to the carousel dynamically
-  window.setTimeout(() => {
-    this.imageURLs = [this.imageURLs[1], ...this.imageURLs]; // duplicate the first iamge
-    this.carouselElement.nativeElement.classList.toggle("initialized")
-    this.actions.emit("carousel");
-  },1000);
-}
+    // example of a hacky way to add an image to the carousel dynamically
+    window.setTimeout(() => {
+      this.imageURLs = [this.imageURLs[1], ...this.imageURLs];
+      this.carouselElement.nativeElement.classList.toggle("initialized")
+      this.actions.emit("carousel");
+    },1000);
+  }
 
 
   ngOnInit() {
+    while(this.provisorio != null){
+      provisorio = localStorage.getItem()
+      let counter= 0;
+      this.produto[counter] = localStorage.getItem('nome_produto_' +counter.toString());
+      this.preco[counter] = localStorage.getItem('preco_produto_' +counter.toString());
+    }
   }
 
   moveNextCarousel(){
