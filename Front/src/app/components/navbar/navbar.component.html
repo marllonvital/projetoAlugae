@@ -18,13 +18,13 @@
 
 
 
-      <div class="perfil_logado">
-        <a id="favorite_link" href="/perfil" class="hide-on-med-and-down"><i class="material-icons favorite_icon">favorite_border</i>Lista de desejos</a>
+      <div class="perfil_logado hide-on-med-and-down" *ngIf="logado">
+        <a id="favorite_link" href="/perfil"><i class="material-icons favorite_icon">favorite_border</i>Lista de desejos</a>
         <img class="img-circle" src="{{perfil_default}}" alt="">
       </div>
-      <!-- <div class="perfil_deslogado">
+      <div class="perfil_deslogado hide-on-med-and-down" *ngIf="!logado">
         <a id="user_login" href="/login"><i class="material-icons favorite_icon">account_circle</i>Entrar</a>
-      </div> -->
+      </div>
 
 
 
@@ -42,12 +42,12 @@
 
 
 
-      <div class="perfil_logado">
-        <a id="cadastrar_link" href="/cadastro-produto" class="hide-on-med-and-down"><i class="material-icons color">add_box</i>Cadastrar produto</a>
+      <div class="perfil_logado hide-on-med-and-down" *ngIf="logado">
+        <a id="cadastrar_link" href="/cadastro-produto"><i class="material-icons favorite_icon">add_box</i>Cadastrar produto</a>
       </div>
-      <!-- <div class="perfil_deslogado">
+      <div class="perfil_deslogado hide-on-med-and-down" *ngIf="!logado">
         <a id="user_cadastro" href="/cadastro-usuario"><img class="cadastrar" src="../../../assets/img/icones/cadastrar.png" alt="">Cadastrar-se</a>
-      </div> -->
+      </div>
 
 
 
@@ -65,16 +65,17 @@
   <div class="row">
     <ul class="side-nav" id="mobile-demo">
         <div class="default_bg side_header col s12 m12">
-          <a href="home.html" class="brand-logo left"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
+          <a href="/home" class="brand-logo left"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
         </div>
         <div class="col s12 m12">
-          <li routerLinkActive="active" class="fundo_active"><a href="/home"><i class="material-icons">home</i>home</a></li>
-          <li routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">account_box</i>Perfil</a></li>
-          <li routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">favorite</i>Lista de Desejos</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/home"><i class="material-icons">home</i>Home</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">account_box</i>Perfil</a></li>
+          <li *ngIf="!logado" routerLinkActive="active" class="fundo_active"><a href="/login"><i class="material-icons">account_circle</i>Login</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">favorite</i>Lista de Desejos</a></li>
           <li routerLinkActive="active" class="fundo_active"><a href="/categoria-eletronico"><i class="material-icons">tv</i>Eletrônicos</a></li>
           <li routerLinkActive="active" class="fundo_active"><a href="/categoria-livro"><i class="material-icons">book</i>Livros</a></li>
           <li routerLinkActive="active" class="fundo_active"><a href="/categoria-cozinha"><i class="material-icons">local_dining</i>Cozinha</a></li>
-          <li routerLinkActive="active" class="fundo_active"><a href="/cadastro-produto"><i class="material-icons color">add_box</i>Cadastrar Item</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/cadastro-produto"><i class="material-icons color">add_box</i>Cadastrar Item</a></li>
         </div>
       </ul>
   </div>

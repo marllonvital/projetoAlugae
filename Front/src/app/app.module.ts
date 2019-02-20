@@ -9,6 +9,7 @@ import { FormsModule} from '@angular/forms';
 import { CadastroProdutoService} from './service/cadastro-produto.service';
 import { CadastroUsuarioService} from './service/cadastro-usuario.service';
 import { LoginService} from './service/login.service';
+import { AuthService } from './service/auth.service';
 import {PesquisaProdutoService} from './service/pesquisa-produto.service';
 
 

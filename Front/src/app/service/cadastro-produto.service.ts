@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {map} from "rxjs/operators";
 import { Observable} from 'rxjs';
 
@@ -16,6 +16,11 @@ export class CadastroProdutoService {
   constructor(private http: HttpClient) { }
 
   addProduto(produto: any): Observable<any>{
+    let token = localStorage.getItem('token')
+    token = 'Bearer ' + token;
+    console.log(token);
+    let headers:HttpHeaders = new HttpHeaders({'Authorization': token});
+    console.log(headers);
     return this.http.post(this.apiUrl,{
       name:produto.nome_produto,
       description:produto.descricao_produto,
@@ -23,6 +28,6 @@ export class CadastroProdutoService {
       type:produto.tipo,
       brand:produto.produto_marca,
       photo:produto.imagem_submit
-    }).pipe(map(res => res));
+    }, {headers} ).pipe(map(res => res));
   }
 }

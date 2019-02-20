@@ -18,14 +18,15 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('login', 'API\PassportController@login');
-Route::post('register', 'API\PassportController@register');
 Route::get('show-img', 'api\ProductController@showPhoto');
-Route::post('product-add', 'ProductController@store');
 Route::get('get-product/{name}', 'ProductController@getProduct');
+Route::post('register', 'API\PassportController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
-    Route::post('get-details', 'API\PassportController@getDetails');
+    Route::get('get-details', 'API\PassportController@getDetails');
+    Route::post('product-add', 'ProductController@store');
+
     Route::get('user/{id}', 'UserController@show');
     Route::put('user/reserveProduct/{product_id}', 'UserController@reserveProduct');
 });

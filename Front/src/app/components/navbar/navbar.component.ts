@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthGuard } from './../../guards/auth.guard';
 
 import {PesquisaProdutoService } from '../../service/pesquisa-produto.service';
 @Component({
@@ -12,8 +13,9 @@ export class NavbarComponent implements OnInit {
   nomeInput: string = "";
   error: boolean = false;
   perfil_default:string = "../../../assets/img/perfil_provisorio/perfil_provisorio2.jpg";
+  logado = this.authGuard.isLoged();
 
-  constructor( public pesguisaProdutoService: PesquisaProdutoService) { }
+  constructor(private authGuard:AuthGuard, public pesquisaProdutoService: PesquisaProdutoService) { }
 
   ngOnInit() {
   }
@@ -21,7 +23,7 @@ export class NavbarComponent implements OnInit {
   onSubmit(){
     this.error=false;
     console.log(this.nomeInput);
-    this.pesguisaProdutoService.getProduto(this.nomeInput).subscribe(
+    this.pesquisaProdutoService.getProduto(this.nomeInput).subscribe(
       res=>{
         console.log(res);
         this.produto = res;
