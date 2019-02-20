@@ -214,4 +214,14 @@ div.modal input[type]:not(.browser-default){
     margin-left: 2%;
     margin-top: 8%;
     }
+
+
+      #texto_configuração{
+        ont-family: Zilla Slab;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 2.4em;
+        text-align: center;
+      }
 }

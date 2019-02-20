@@ -21,7 +21,7 @@ const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'sobre', component: SobreComponent},
     {path: 'login', component: LoginComponent},
-    {path: 'perfil', component: PerfilComponent, canactivate: [AuthGuard]} ,
+    {path: 'perfil', component: PerfilComponent},
     {path:'produto',component: ProdutoComponent},
     {path:'pesquisa-produto',component: PesquisaProdutoComponent},
     {path:'categoria-cozinha',component: CategoriaCozinhaComponent},

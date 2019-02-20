@@ -277,7 +277,28 @@ i.material-icons.fechar{
     line-height: normal;
     font-size: 2.4em;
     text-align: center;
+  }
 
+  #texto_confirmacao{
+    ont-family: Zilla Slab;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 2.4em;
+    text-align: center;
+  }
+
+  #texto_confirmacao_aluguel{
+    ont-family: Zilla Slab;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 1.8em;
+    text-align: center;
+  }
+
+  .logo_size{
+    height: 10vh;
   }
 
   .perfil{

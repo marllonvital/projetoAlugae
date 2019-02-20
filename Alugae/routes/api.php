@@ -22,10 +22,10 @@ Route::post('register', 'API\PassportController@register');
 Route::get('show-img', 'api\ProductController@showPhoto');
 Route::post('product-add', 'ProductController@store');
 Route::get('get-product/{name}', 'ProductController@getProduct');
+
 Route::group(['middleware' => 'auth:api'], function() {
     Route::get('logout', 'API\PassportController@logout');
     Route::post('get-details', 'API\PassportController@getDetails');
-
     Route::get('user/{id}', 'UserController@show');
     Route::put('user/reserveProduct/{product_id}', 'UserController@reserveProduct');
 });

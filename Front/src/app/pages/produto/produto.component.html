@@ -115,12 +115,17 @@
     </div>
   </section>
 
-<div class="modal" materialize="modal" [materializeParams]="[{dismissable:true}]" [materializeActions]="modalActions">
+<div class="modal"
+      materialize="modal"
+      [materializeParams]="[{dismissable:true}]"
+      [materializeActions]="modalActions">
+        <i class="material-icons fechar" (click)="fechaModal()">close</i>
   <div class="modal-content row">
-    <i class="material-icons fechar" (click)="fechaModal()">close</i>
-    <img class="logo_size" src="../../../assets/img/logo/logo_alugaÊ_menor.png">
-    <h1 class="white-text">CONFIRMAÇÃO:</h1>
-    <h3 class="white-text">Você deseja confirmar o Aluguel?</h3>
-    <button class="btn waves-effect waves-light" type="submit" name="button">ALUGAR!!</button>
+    <div class="col s12">
+      <img class="logo_size"  src="../../../assets/img/logo/logo_alugaÊ_menor.png">
+      <h1 id="texto_confirmacao" class="white-text">CONFIRMAÇÃO:</h1>
+      <h3 id="texto_confirmacao_aluguel" class="white-text">Você deseja confirmar o Aluguel?</h3>
+      <button class="btn waves-effect waves-light" type="submit" name="button">ALUGAR!!</button>
+    </div>
   </div>
 </div>
