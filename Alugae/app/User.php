@@ -74,13 +74,13 @@ class User extends Authenticatable
     }
 
     public function product(){
-        return $this->hasMany('App\Product')->get();
+        return $this->hasMany('App\Product');
     }
 
     //reserva o produto ou falha
     public function reserveProduct($product_id){
         $product = Product::findOrFail($product_id);
-        $this->product()->attach([$this->id]);
+        $this->products()->attach([$product->id]);
         return true;
     }
 

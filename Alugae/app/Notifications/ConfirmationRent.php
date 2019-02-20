@@ -25,12 +25,11 @@ class ConfirmationRent extends Notification
     public function toMail($notifiable)
     {
         $novo_usuario = $notifiable;
-        $product = DB::table('rents')->where('product_id',$product->id)->orderBy('id','desc')->first();
 
         return (new MailMessage)
                     ->greeting('Olá, '.$novo_usuario->name)
-                    ->line('Estamos confirmando o aluguel do produto '.$product->name)
-                    ->line('Desfrute do produto o quanto quiser, mas lembre-se da data final! '.$product->date_final);
+                    ->line('Estamos confirmando o aluguel de seu produto')
+                    ->line('Desfrute do produto o quanto quiser, mas lembre-se de devolvê-lo em 1 semana!');
     }
 
     /**
