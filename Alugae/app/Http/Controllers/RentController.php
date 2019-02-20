@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Notifications\ConfirmationRent;
 use Illuminate\Http\Request;
 use App\Rent;
+
 class RentController extends Controller
 {
 

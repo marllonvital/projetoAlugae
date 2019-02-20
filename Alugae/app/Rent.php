@@ -15,22 +15,18 @@ class Rent extends Pivot
     return Carbon::createFromFormat('d-m-Y', $this->date_final)->format('d/m/Y');
   }
 
+  public function createRent($product_id) {
+    $date_initial = Carbon::now()->format('D/M/Y');
+    $date_final = Carbon::now()->addDays(7)->format('D/M/Y');
+  	$newRent = reserveProduct($product_id);
+  	$this->notify(new ConfirmationRent($newRent));
+  	return response()->json('Aluguel feito com sucesso!');
+  }
 //   public function insereAluguel($request){
 //     $days = $request->days;
 //     // $this->quantity=$request->quantity;
 //     $this->date_initial= new Carbon()->format('D-M-Y');
 //     );
-//     $this->product_id=$request->product_id;
-//     $this->user_id=$request->user_id;
-
-//     $this->save();
-//   }
-//   public function atualizaAluguel($request){
-
-//     $this->historic=$request->historic;
-//     $this->quantity=$request->quantity;
-//     $this->date_final=$request->date_final;
-//     $this->date_initial=$request->date_initial;
 //     $this->product_id=$request->product_id;
 //     $this->user_id=$request->user_id;
 

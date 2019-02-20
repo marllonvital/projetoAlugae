@@ -19,17 +19,17 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('login', 'API\PassportController@login');
 Route::post('register', 'API\PassportController@register');
-// Route::get('show-img', 'api\ProductController@showPhoto');
 
 Route::group(['middleware' => 'auth:api'], function() {
-    Route::get('logout', 'API\PassportController@logout');
-    Route::get('get-details', 'API\PassportController@getDetails');
-    Route::post('product-add', 'ProductController@store');
-    Route::get('get-product/{name}', 'ProductController@getProduct');
-    Route::get('get-product/{id}', 'ProductController@getProductById');
-    Route::get('get-user/{id}', 'ProductController@getUsers');
 
-    Route::put('user/reserveProduct/{product_id}', 'UserController@reserveProduct');
+    Route::get('logout', 'API\PassportController@logout');
+    Route::post('product-add', 'ProductController@store');
+    Route::get('get-details', 'API\PassportController@getDetails');
+    Route::get('get-product/{name}', 'ProductController@getProduct');
+    Route::get('get-item/{id}', 'ProductController@getItem');
+    Route::get('get-users/{id}', 'ProductController@getUsers');
+
+    Route::put('reserveproduct/{product_id}', 'UserController@reserveProduct');
 });
 
     // Admin Route

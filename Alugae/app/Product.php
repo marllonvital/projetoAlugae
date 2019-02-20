@@ -20,13 +20,13 @@ class Product extends Model
       return User::find($this->user_id);//$this->belongsTo('App\User');
     }
 
-  public function newRent($user_id){
-      $user = User::findOrFail($user_id);
-      $this->users()->attach($user_id, ['date_initial' => Carbon::now(),'date_final' => Carbon::now(), 'quantity' => 2]);
-      return true;   
-    }
+  // public function newRent($user_id){
+  //     $user = User::findOrFail($user_id);
+  //     $this->users()->attach($user_id, ['date_initial' => Carbon::now(),'date_final' => Carbon::now(), 'quantity' => 2]);
+  //     return true;   
+  //   }
 
-  public function insereProduto($request, $user){
+  public function insereProduto($request, User $user){
 
     $this->user_id=$user->id;
     $this->description=$request->description;

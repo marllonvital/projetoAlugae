@@ -19,7 +19,7 @@ class UserRequest extends FormRequest
         if($this->isMethod('post')){
             return[
                 'name' => 'required|string',
-                'email' => 'required|email',
+                'email' => 'required|email|unique:users,email',
                 'cpf' => 'required|cpf|formato_cpf',
                 'cep' => 'required|numeric',
                 'city' => 'required|string',
@@ -51,6 +51,7 @@ class UserRequest extends FormRequest
     public function messages() {
         return [
             'name.required' => "Campo Obrigatório!",
+            'email.unique' => "Informe um email ainda não cadastrado",
             'email.required' => "Campo Obrigatório!",
             'email.email' => "O campo deve ser preenchido no formato nameDoUsuario@exemplo.com",
             'cpf.required' => "Campo Obrigatório",

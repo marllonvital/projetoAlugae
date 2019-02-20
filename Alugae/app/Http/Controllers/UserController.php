@@ -1,12 +1,13 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Notifications\ConfirmationRegister;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\Validator;
-use App\Notifications\ConfirmationRegister;
+use App\Notifications\ConfirmationRent;
 use Carbon\Carbon;
 use App\User;
-
+use Auth;
 class UserController extends Controller
 {
     public function index()
@@ -42,22 +43,20 @@ class UserController extends Controller
 
     //Funções de usuário autenticado
 
-    public function reserveProduct($product_id, $date)
+    public function reserveProduct($product_id)
     {
-        $days = $date;
-        $date_initial = new Carbon();
-        $date_final = $date_initial
         $user = Auth::user();
         $user->reserveProduct($product_id);
-        return response()->json(['Reservado']);
+        $user->notify(new ConfirmationRent($user));
 
+        return response()->json(['Reservado']);
     }
 
-    public function removeProduct()
+    public function removeProduct($id)
     {
         $user = Auth::user();
 
-        $user->removeproduct();
+        $user->removeproduct($id);
 
         return response()->json(['Removido']);
 

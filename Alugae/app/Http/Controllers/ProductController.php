@@ -8,6 +8,7 @@ use App\Http\Requests\ProductRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Product;
+use App\User;
 
 class ProductController extends Controller
 {
@@ -53,8 +54,9 @@ class ProductController extends Controller
     public function getUsers($id)
   {
       $product = Product::findOrFail($id);
-      
-      return response()->json([$product->users]);
+      $userid = $product->user_id;
+      $user = User::findOrFail($userid);
+      return response()->json([$user]);
   }
 
   public function getProduct($name){
@@ -63,9 +65,8 @@ class ProductController extends Controller
     return response()->json([$products]);
   }
 
-  public function getProductById($id){
-
-    $products = Product::where('id', $id)->get();
-    return response()->json([$products]);
+  public function getItem($id){
+    $product = Product::findOrFail($id);
+    return response()->json([$product]);
   }
 }

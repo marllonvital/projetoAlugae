@@ -74,30 +74,20 @@ class User extends Authenticatable
     }
 
     public function product(){
-        return $this->hasMany('App\product');
+        return $this->hasMany('App\Product')->get();
     }
 
     //reserva o produto ou falha
     public function reserveProduct($product_id){
-        $product = product::findOrFail($product_id);
-        $this->products->attach([$this->id]);
-        $this->notify(new ConfirmationRent($newRent));
-
+        $product = Product::findOrFail($product_id);
+        $this->product()->attach([$this->id]);
         return true;
     }
 
-    public function removeproduct(){
-        $product = $this->product;
-
-        $product->removeUsers([$this->id]);
-
+    public function removeproduct($id){
+        $product = Product::findOrFail($id);
+        $this->products()->datach($id);
         return true;
     }
-
-    public function getUser($id) {
-      $user = findOrFail($id);
-      return response()->json($user);
-    }
-
 
 }

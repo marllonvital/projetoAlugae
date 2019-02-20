@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->string('photo')->nullable();
             $table->integer('price');
             $table->string('description');
+            $table->boolean('is_admin')->default(true);
             $table->boolean('availability')->default(true);
             $table->timestamps();
         });

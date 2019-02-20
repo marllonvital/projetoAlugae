@@ -13,9 +13,9 @@ class CreateProductUserTable extends Migration
             $table->increments('id');
             $table->integer('product_id')->unsigned()->nullable();
             $table->integer('user_id')->unsigned()->nullable();
-            $table->date('date_initial');
-            $table->date('date_final');
-            $table->integer('quantity');
+            $table->date('date_initial')->nullable();
+            $table->date('date_final')->nullable();
+            $table->integer('quantity')->nullable();
             $table->timestamps();
         });
 
