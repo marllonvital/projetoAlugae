@@ -1,0 +1,46 @@
+/* Elementos */
+
+/* Classes */
+
+.card{
+  background-color: #393F60;
+  margin: 0;
+  border-radius: 0;
+  margin-top: 5vh;
+}
+
+.logo{
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 0;
+  }
+
+
+
+/* Ids */
+
+#texto_cadastro{
+ color:#DFE2E2;
+ margin-left: 5%;
+ font-family: 'Zilla Slab', serif;
+ font-weight: bold;
+}
+
+@media (orientation: landscape) {
+  .viewport-1{
+    background-image: url("../../../assets/img/cover/cadastro.jpg");
+    background-size: cover;
+    background-position: absolute;
+    background-repeat: no-repeat;
+
+    height: 200vh;
+  }
+
+  .card{
+    background-color: #393F60;
+    margin-left: 60%;
+    position: absolute;
+    border-radius: 15px;
+  }
+
+}

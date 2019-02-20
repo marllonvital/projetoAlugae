@@ -1,0 +1,82 @@
+<!-- <img src="../../assets/img/icones/lupa.svg" alt=""> -->
+<!-- <i class="material-icons">search</i> -->
+
+
+<nav class="main_nav nav-extended">
+  <div class="nav-wrapper row">
+    <a href="/home" class="brand-logo alugae_icon hide-on-med-and-down"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
+    <a href="/home" class="brand-logo center hands_icon hide-on-large-only"><img src="../../../assets/img/logo/ALugaÊ_ICON.svg" class="hands_icon" alt="Logo"></a>
+    <a materialize="sideNav" [materializeParams]="[{edge:'left'}]"  href="#" data-activates="mobile-demo" class="hide-on-large-only sidenav-trigger"><i class="material-icons">menu</i></a>
+    <div class="row col l12">
+      <form>
+        <div class="input-field col offset-l3 l6 hide-on-med-and-down">
+          <input id="search" type="search" placeholder="Procure um produto para alugar:" required>
+        </div>
+        <button class="btn waves-light col l1 hide-on-med-and-down valign-wrapper" type="submit" name="busca">Busca</button>
+      </form>
+
+
+
+
+      <div class="perfil_logado hide-on-med-and-down" *ngIf="logado">
+        <a id="favorite_link" href="/perfil"><i class="material-icons favorite_icon">favorite_border</i>Lista de desejos</a>
+        <img class="img-circle" src="{{perfil_default}}" alt="">
+      </div>
+      <div class="perfil_deslogado hide-on-med-and-down" *ngIf="!logado">
+        <a id="user_login" href="/login"><i class="material-icons favorite_icon">account_circle</i>Entrar</a>
+      </div>
+
+
+
+    </div>
+  </div>
+  <div class="ally_nav">
+    <div class="row">
+      <ul class="flex_container hide-on-med-and-down">
+        <li class=""><a href="/categoria-eletronico">Eletrônicos</a></li>
+        <li class="divisor">|</li>
+        <li class=""><a href="/categoria-livro">Livros</a></li>
+        <li class="divisor">|</li>
+        <li class=""><a href="/categoria-cozinha">Cozinha</a></li>
+      </ul>
+
+
+
+      <div class="perfil_logado hide-on-med-and-down" *ngIf="logado">
+        <a id="cadastrar_link" href="/cadastro-produto"><i class="material-icons favorite_icon">add_box</i>Cadastrar produto</a>
+      </div>
+      <div class="perfil_deslogado hide-on-med-and-down" *ngIf="!logado">
+        <a id="user_cadastro" href="/cadastro-usuario"><img class="cadastrar" src="../../../assets/img/icones/cadastrar.png" alt="">Cadastrar-se</a>
+      </div>
+
+
+
+      <form class="hide-on-large-only">
+        <div class="input-field col offset-m2 m8 offset-s2 s8">
+          <input id="search_ally" type="search" placeholder="Busca" required>
+        </div>
+        <img class="col m1 s1" id="lupa" src="../../assets/img/icones/lupa.svg" (click)="null" alt="">
+      </form>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <div class="row">
+    <ul class="side-nav" id="mobile-demo">
+        <div class="default_bg side_header col s12 m12">
+          <a href="/home" class="brand-logo left"><img src="../../../assets/img/logo/logo_alugaÊ_menor.png" class="logo_size" alt="Logo"></a>
+        </div>
+        <div class="col s12 m12">
+          <li routerLinkActive="active" class="fundo_active"><a href="/home"><i class="material-icons">home</i>Home</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">account_box</i>Perfil</a></li>
+          <li *ngIf="!logado" routerLinkActive="active" class="fundo_active"><a href="/login"><i class="material-icons">account_circle</i>Login</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/perfil"><i class="material-icons">favorite</i>Lista de Desejos</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-eletronico"><i class="material-icons">tv</i>Eletrônicos</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-livro"><i class="material-icons">book</i>Livros</a></li>
+          <li routerLinkActive="active" class="fundo_active"><a href="/categoria-cozinha"><i class="material-icons">local_dining</i>Cozinha</a></li>
+          <li *ngIf="logado" routerLinkActive="active" class="fundo_active"><a href="/cadastro-produto"><i class="material-icons color">add_box</i>Cadastrar Item</a></li>
+        </div>
+      </ul>
+  </div>
+</section>

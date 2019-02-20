@@ -1,0 +1,153 @@
+/* Elementos */
+h5{
+margin-bottom: 1%;
+}
+
+h3{
+  font-size: 2.5rem;
+}
+
+/* Classes */
+
+.botao{
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+}
+
+.frase_cover{
+  /* posicionamento da frase que fica sobreposta ao banner */
+  position: absolute;
+  text-align: center;
+  text-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+  left: 10%;
+}
+
+.logo{
+  width: 7vw;
+  margin-left: 1%;
+  border-radius: 15px;
+}
+
+.logo_banner_mobile{
+  width: 30vw;
+  float: left;
+}
+
+.font_size_h3{
+  font-size: 5vw;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+
+.banner_subtitle{
+  background: #575E8B;
+  padding: 3vw;
+  height: 1;
+  width: 100%;
+  margin: 0;
+}
+
+.banner_subtitle .row{
+  margin-bottom: 0;
+}
+
+.banner_subtitle p{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #F4F4F4;
+}
+
+.flex-container .card{
+  margin: 4vh 0 1vh 0;
+}
+
+.card{
+  margin: 0 1.5vw 0 1.5vw;
+  text-align: left;
+  /* muitos problemas pra deiaxr o card com tamanho responsivo, dessa forma ele parece ficar bem em todas as telas */
+  height: 500px;
+}
+
+.card-content h3{
+  margin-top: 0;
+}
+section .card-content h3, section .card-content h5{
+  padding: 0 1.5vw;
+}
+
+.white-text{
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.card-title{
+  /* ajeitando o botão em cima da imagem, é mais fácil aumentar isso aqui
+   que fazer mais umas 3 classes só pra posicionar o botão direito */
+  width: 100%;
+  height: 100%
+}
+
+.texto_mobile{
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  margin: 0;
+}
+
+.veja_mais{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  padding: 1vw;
+}
+
+
+#momento_section{
+  margin-left: 10vw;
+}
+
+#wrapper{
+  display: table;
+}
+
+#wrapper .card{
+  display: table-cell;
+}
+
+
+div.card-title.row a{
+  margin: 1.78rem 0 1.424rem 0;
+}
+
+/* @media (min-width: 892px) and (max-width: 992px) {
+  .cards-container{
+    margin-top: 5vh;
+  }
+} */
+
+@media (max-width: 992px) {
+  .card{
+    height: auto;
+  }
+}
+@media only screen and (min-width: 892px) and (max-width: 1049px) {
+  .cards-container{
+    margin-top: 5vh;
+  }
+
+}
+@media (orientation: landscape) {
+  .font_size_h3{
+    font-size: 4vw;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+
+  .font_size_h2{
+    font-size: 5vw;
+    margin-top: 1vh
+  }
+}

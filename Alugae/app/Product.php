@@ -20,12 +20,6 @@ class Product extends Model
       return User::find($this->user_id);//$this->belongsTo('App\User');
     }
 
-  // public function newRent($user_id){
-  //     $user = User::findOrFail($user_id);
-  //     $this->users()->attach($user_id, ['date_initial' => Carbon::now(),'date_final' => Carbon::now(), 'quantity' => 2]);
-  //     return true;   
-  //   }
-
   public function insereProduto($request, User $user){
 
     $this->user_id=$user->id;
@@ -37,11 +31,14 @@ class Product extends Model
 
     // if(!Storage::exists('localPhotos/')) //Criando uma pasta para armanezar as fotos!
     //         Storage::makeDirectory('localPhotos/',0775,true);
-
     // $validator = Validator::make($request->all(), [
     //   'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
     // ]);
-
+    //
+    // $validator = Validator::make($request->all(), [
+    //   'photo' =>'required|file|image|mimes:jpg,jpeg,png,gif,webp|max:2048'
+    // ]);
+    //
     // $file = $request->file('photo');
     // $path = $file->store('localPhotos');
     // $this->photo = $file;

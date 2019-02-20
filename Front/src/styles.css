@@ -1,1 +1,182 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #E8EBFF;
+}
+
+/* Elementos */
+h1, h2,h3{
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
+  color: #393F60;
+}
+
+h4,h5,h6, p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#575E8B;
+}
+
+input[type]:not(.browser-default){
+  background-color: white;
+  margin-bottom: 0;
+}
+
+input[type]:not(.browser-default):focus{
+  border-bottom: none;
+  box-shadow: none;
+}
+
+/* label color */
+ .input-field label {
+   color:#1CB3C8;
+ }
+ /* label focus color */
+ .input-field input[type]:focus + label {
+   color: #fff !important;
+ }
+
+
+/* TAMANHO DAS TAGS HEADER QUE PEGUEI NO MATERIALIZE.CSS E DEIXEI AQUI PARA
+PODER USAR EM BANNERS E ETC SEM ESTRAGAR O USO DE TAGS SEMÂNTICAS */
+.font_size_h1 {
+  font-size: 4.2rem;
+  line-height: normal;
+  margin: 2.8rem 0 1.68rem 0;
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
+  color: #393F60;
+  letter-spacing: normal;
+}
+
+.font_size_h2 {
+  font-size: 3.56rem;
+  line-height: normal;
+  margin: 2.3733333333rem 0 1.424rem 0;
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
+  color: #393F60;
+  letter-spacing: normal;
+}
+
+.font_size_h3 {
+  font-size: 2.92rem;
+  line-height: normal;
+  margin: 1.9466666667rem 0 1.168rem 0;
+  font-family: 'Zilla Slab', serif;
+  font-weight: bold;
+  color: #393F60;
+  letter-spacing: normal;
+}
+
+.font_size_h4 {
+  font-size: 2.28rem;
+  line-height: 110%;
+  margin: 1.52rem 0 0.912rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#575E8B;
+}
+
+.font_size_h5 {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: 1.0933333333rem 0 0.656rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#575E8B;
+}
+
+.font_size_h6 {
+  font-size: 1.15rem;
+  line-height: 110%;
+  margin: 0.7666666667rem 0 0.46rem 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#575E8B;
+}
+
+
+
+/* Classes */
+
+.meio{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.btn, .btn-large {
+  text-decoration: none;
+  color: #fff;
+  background-color: #1CB3C8;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+}
+
+.btn:hover, .btn-large:hover{
+  background-color: #1CB3C8
+}
+
+.flex_container{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 30vw 0 30vw;
+}
+
+.container{
+  margin: 0;
+  max-width: 100vw;
+  width: 100%;
+}
+
+.row .col{
+  padding: 0;
+}
+
+div.container h1, div.container h2, div.container h3, div.container h4, div.container h5, div.container h6, div.container p, section.container h1, section.container h2, section.container h3, section.container h4, section.container h5, section.container h6, section.container p{
+  padding: 0 3vw 0 3vw;
+}
+
+.container img{
+  padding: 0;
+}
+
+.modal-content{
+  background: #575E8B;
+  border-width: 1vw;
+  border-style: solid;
+  border-color: #95B2D0;
+}
+
+
+
+
+
+/* Media Querys */
+@media (orientation: landscape){
+  .container{
+    margin: 0vh 10vw 5vh 10vw;
+    max-width: 100vw;
+    width: 80%;
+    padding: 0;
+  }
+}
+
+/* RESOLVENDO O PROBLEMA DO IPAD PRO FAZENDO QUE SEMPRE QUE A A ORIENTAÇÃO FOR DE RETRATO ATIVE A VERSÃO MOBILE */
+@media (orientation: portrait) and (max-width: 600px) {
+  .hide-on-med-and-down{
+    display: none !important;
+  }
+  .hide-on-large-only{
+    display: block !important;
+  }
+
+}
+
+@media (orientation: portrait) and (min-width: 600px) and (max-width: 992px) {
+  .container{
+    padding-left: 3vw;
+    padding-right: 3vw;
+    max-width: 100vw;
+    width: 100%;
+  }
+}

@@ -21,8 +21,8 @@ Route::post('login', 'API\PassportController@login');
 Route::post('register', 'API\PassportController@register');
 
 Route::group(['middleware' => 'auth:api'], function() {
-
     Route::get('logout', 'API\PassportController@logout');
+    Route::get('get-details', 'API\PassportController@getDetails');
     Route::post('product-add', 'ProductController@store');
     Route::get('get-details', 'API\PassportController@getDetails');
     Route::get('get-product/{name}', 'ProductController@getProduct');

@@ -1,0 +1,54 @@
+
+.carousel .carousel-item{
+  top: -100px;
+  opacity: 1 !important;
+}
+
+.carousel{
+  display: flex;
+  align-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card .card-image img{
+  max-height: 15vh;
+}
+
+
+.middle-indicator-text{
+ font-size: 5vh;
+}
+
+.content-indicator{
+
+    position: relative;
+    top: 17.5vh;
+    height: 5vh !important;
+    width: 5vh !important;
+    color: #fff;
+    background-color: #1CB3C8;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    /* margin: auto 5vw; */
+  }
+
+.carousel{
+}
+@media (orientation: landscape) {
+  .left{
+    position: relative;
+    right: 5vw;
+  }
+  .right{
+    position: relative;
+    left: 5vw;
+  }
+  .middle-indicator-text{
+   font-size: 5vh;
+   left: 5vw
+  }
+
+
+}

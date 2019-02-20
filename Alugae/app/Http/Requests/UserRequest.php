@@ -62,6 +62,7 @@ class UserRequest extends FormRequest
             'complement.required' => "Campo Obrigatório",
             'password.digits' => "A senha deve conter exatamente 8 caracteres",
             'c_password.same' => "As senhas devem ser iguais",
+            
         ];
     }
 }

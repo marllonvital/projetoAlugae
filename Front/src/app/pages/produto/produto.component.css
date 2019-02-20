@@ -1,0 +1,336 @@
+/* Elementos */
+
+
+/* Classe */
+.botao_alugar{
+  margin-top: 5%;
+  margin-left: 10%;
+}
+
+.botao_favoritos{
+  margin-left: 10%;
+  margin-top: 5%;
+  background-color: #95B2D0;
+  text-align: center;
+}
+.perfil{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+.comentario_usuario{
+  background: #575E8B;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.comentario_postado{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.card_descricao_produto{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.card_detalhes{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.comentario_text{
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.lista_text{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2em;
+  text-align: center;
+}
+
+.outros_produtos{
+  background: #FFFFFF;
+  border: 3px solid #95B2D0;
+  box-sizing: border-box;
+  margin-bottom: 0%;
+  border-radius: 10px;
+  margin-right: 5%;
+}
+
+/* id */
+#img-circle {
+  position: absolute;
+  width: 30%;
+  border-radius: 50%;
+  margin-left: 5%;
+  margin-top: 20%;
+}
+
+#img-circle_comentarios {
+  position: absolute;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#img-circle_comentarios_usuario {
+  position: absolute;
+  width: 10%;
+  border-radius: 50%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+#img_produdo{
+  border: 3px solid #95B2D0;
+  width: 80%;
+  margin-bottom: 14%;
+}
+
+#usuario_name{
+  position: absolute;
+  font-size: 1.6em;
+  margin-left: 40%;
+  margin-top: 2%;
+}
+
+#usuario_name_comentario{
+  position: absolute;
+  font-size: 1.6em;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+
+#complemento_nome_comentario{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 0.8em;
+  color:#575E8B;
+}
+
+#image_banner{
+  border-radius: 8px 8px 0px 0px;
+}
+
+#texto_perfil_Palugar{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1.2em;
+  margin-top: 40%;
+  text-align: center;
+}
+
+
+#texto_perfil_alugados{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1.2em;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#texto_perfil_alugando{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 1.2em;
+  margin-top: 40%;
+  text-align: center;
+}
+
+#qtd_alugando{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+#qtd_alugados{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+#qtd_Palugar{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+
+#texto_comentario{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 1.5em;
+  color:#575E8B;
+  margin-top: 10%;
+}
+
+#texto_descricao{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 160%;
+  font-size: 1.5em;
+  color:#575E8B;
+}
+
+#titulo_descricao{
+  font-family: Zilla Slab;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 2em;
+}
+
+.logo_size{
+  height: 25vh;
+}
+
+ div.row.modal-content{
+   text-align: center;
+   margin-bottom: 0;
+ }
+
+ div.modal{
+   overflow: visible;
+ }
+
+i.material-icons.fechar{
+  position: absolute;
+  font-size: 2rem;
+  top: 1vw;
+  right: 1vw;
+  background: #1CB3C8;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+  @media (max-width: 600px)
+{
+  #img-circle_comentarios_usuario {
+    position: absolute;
+    width: 15%;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-top: 10%;
+  }
+  #img-circle_comentarios {
+    position: absolute;
+    width: 15%;
+    border-radius: 50%;
+    margin-left: 8%;
+    margin-top: 4%;
+  }
+  #texto_comentario{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 1.5em;
+    color:#575E8B;
+    margin-top: 20%;
+  }
+  #img_produdo{
+    border: 3px solid #95B2D0;
+    width: 100%;
+    margin-bottom: 14%;
+  }
+
+  #usuario_name_comentario{
+    position: absolute;
+    font-size: 1.6em;
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+  #nome_produto{
+    ont-family: Zilla Slab;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 2.4em;
+    text-align: center;
+
+  }
+
+  .perfil{
+    background: #FFFFFF;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .outros_produtos{
+    background: #FFFFFF;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    margin-bottom: 0%;
+    border-radius: 10px;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .comentario_usuario{
+    background: #575E8B;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .comentario_postado{
+    background: #FFFFFF;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .card_descricao_produto{
+    background: #FFFFFF;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .card_detalhes{
+    background: #FFFFFF;
+    border: 3px solid #95B2D0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
